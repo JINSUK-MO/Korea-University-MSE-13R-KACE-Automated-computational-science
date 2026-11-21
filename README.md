@@ -13,4 +13,7 @@ We were interested in machine-learning interatomic potentials (MLIPs), therefore
 
 ## Contributors
 - [@Jinsuk Mo](https://github.com/JINSUK-MO)
+- [@username](https://github.com/username)
+- [@Jiyeon Lee](https://github.com/jiyeonie322)
+- [@Yunsuk Jung](https://github.com/Sukee03)
 - [@Junyoung Choi](https://github.com/chlwnsdud27-cloud)
