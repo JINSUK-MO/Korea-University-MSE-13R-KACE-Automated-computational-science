@@ -43,7 +43,7 @@ Rather than proposing a universally transferable electronic-structure predictor,
 
 ### 2.1 MACE Interatomic Potential
 
-Machine learning interatomic potentials (MLIPs) approximate the potential-energy surface of an atomic system from its chemical composition and geometry. MACE (Message Passing Atomic Cluster Expansion) combines equivariant message passing with many-body atomic cluster features [7]. Local environments are represented using the positions and chemical species of neighboring atoms, while the architecture is designed to respect the symmetries of three-dimensional space. Consequently, the predicted scalar energy is invariant under global translations and rotations, and the derived forces transform consistently with the atomic coordinates.
+Machine learning interatomic potentials (MLIPs) approximate the potential-energy surface of an atomic system from its chemical composition and geometry. MACE (Message Passing Atomic Cluster Expansion) combines equivariant message passing with many-body atomic cluster features [[7]](#ref7). Local environments are represented using the positions and chemical species of neighboring atoms, while the architecture is designed to respect the symmetries of three-dimensional space. Consequently, the predicted scalar energy is invariant under global translations and rotations, and the derived forces transform consistently with the atomic coordinates.
 
 Unlike an explicit electronic-structure calculation, a conventional MACE interatomic potential does not directly provide orbital eigenstates, Hamiltonian matrix elements, or a projected density of states (PDOS). Its principal outputs are potential energies and atomic forces. The present project uses these outputs as energetic and mechanical reference quantities for a separately parameterized Slater–Koster (S–K) tight-binding model; it does not train a neural-network head to predict a DFT Hamiltonian.
 
@@ -64,9 +64,9 @@ $$H_{i\mu,j\nu}\left( \mathbf{R}_{\mathbf{ij}} \right) = \sum_{\lambda}{C_{\mu\n
 
 For instance, the pₓ–pₓ term is $H_{p_{x},p_{x}} = l^{2}V_{pp\sigma} + \left( 1 - l^{2} \right)V_{pp\pi}$. The same approach produces the Pt d–d and Pt d–O p couplings, as well as the additional s-containing couplings. The direction dependence is particularly relevant to the ontop, bridge, and hollow geometries because their metal–adsorbate bond orientations differ even for the same atomic species.
 
-**Table 1.** Slater-Koster angular-coefficient table used to construct the orbital hopping blocks. Here, x, y, and z are the direction cosines of $\widehat{\mathbf{R}}$ with $x^{2} + y^{2} = 1$, and the notation $\alpha = x^{2} + y^{2}$ and $\beta = x^{2} - y^{2}$. Reproduced from Koskinen (2009) [8].
+**Table 1.** Slater-Koster angular-coefficient table used to construct the orbital hopping blocks. Here, x, y, and z are the direction cosines of $\widehat{\mathbf{R}}$ with $x^{2} + y^{2} = 1$, and the notation $\alpha = x^{2} + y^{2}$ and $\beta = x^{2} - y^{2}$. Reproduced from Koskinen (2009) [[8]](#ref8).
 
-> **Table 1 note:** The original table is embedded as an image in the Word source and is not transcribed here. Refer to Koskinen and Mäkinen (2009) [8] for the full angular-coefficient table.
+> **Table 1 note:** The original table is embedded as an image in the Word source and is not transcribed here. Refer to Koskinen and Mäkinen (2009) [[8]](#ref8) for the full angular-coefficient table.
 
 The original reduced orbital model considered Pt 5d, O 2p, and H 1s states. The final notebook extends this basis to Pt (5d + 6s), O (2s + 2p), and H (1s). This extension introduces new hopping channels, including Pt s–s/s–d, Pt–O d–s/s–p/s–s, and O–O s–p/s–s contributions. Each chemical pair retains a separate repulsive term in addition to its electronic hopping channels. The basis remains orthogonal and non-spin-polarized; thus, the overlap matrix is treated as the identity and explicit spin splitting is not included.
 
@@ -78,7 +78,7 @@ Once the tight-binding Hamiltonian is assembled, the electronic eigenvalues and 
 
 $$H(k)c_{n}(k) = \varepsilon_{n}(k)c_{n}(k);\quad\quad H(k)^{\dagger} = H(k)$$
 
-The density of states counts electronic eigenstates in an energy interval. Orbital-projected DOS is obtained from a projection operator ${\widehat{P}}_{M}$ onto a selected atomic orbital or group M. In an orthonormal basis, ${\widehat{P}}_{M}\  = \ \Sigma\mu \in M\ |\mu\rangle\langle\mu|$; its expectation value on an eigenstate becomes the sum of $|cₙ\mu(k)|²$ over the selected orbitals, consistent with the projector-based definition used in QuantumATK documentation [9].
+The density of states counts electronic eigenstates in an energy interval. Orbital-projected DOS is obtained from a projection operator ${\widehat{P}}_{M}$ onto a selected atomic orbital or group M. In an orthonormal basis, ${\widehat{P}}_{M}\  = \ \Sigma\mu \in M\ |\mu\rangle\langle\mu|$; its expectation value on an eigenstate becomes the sum of $|cₙ\mu(k)|²$ over the selected orbitals, consistent with the projector-based definition used in QuantumATK documentation [[9]](#ref9).
 
 $$D_{M}(E) = \left( 1/N_k \right)\sum_{\mathbf{k}}\sum_n\left\langle \psi_{n\mathbf{k}}\left| {\widehat{P}}_{M} \right|\psi_{n\mathbf{k}} \right\rangle\delta(E - \varepsilon_{n\mathbf{k}})$$
 
@@ -232,9 +232,9 @@ The initial Pt-derived spectrum contained several narrow features, while the O 2
 
 ### 4.2 Comparison with DFT-PDOS
 
-The initial PDOS was first compared qualitatively with the surface electronic-structure trends discussed by Shuttleworth (2018) for oxygenated and hydroxylated Pt(111) [10]. Spectral features in the vicinity of approximately −5 eV (relative to each plot’s own Fermi energy) were identified as a broad point of resemblance. However, these literature calculations used different structural and modeling conditions, and similar peak positions alone cannot establish quantitative validation.
+The initial PDOS was first compared qualitatively with the surface electronic-structure trends discussed by Shuttleworth (2018) for oxygenated and hydroxylated Pt(111) [[10]](#ref10). Spectral features in the vicinity of approximately −5 eV (relative to each plot’s own Fermi energy) were identified as a broad point of resemblance. However, these literature calculations used different structural and modeling conditions, and similar peak positions alone cannot establish quantitative validation.
 
-**Figure 4.** Representative Pt(111) electronic-structure spectra reproduced in the project material from Shuttleworth (2018); shown for qualitative context, not a numerical benchmark.
+**Figure 4.** Representative Pt(111) electronic-structure spectra reproduced in the project material from Shuttleworth (2018) [[10]](#ref10); shown for qualitative context, not a numerical benchmark.
 
 A separate DFT calculation was subsequently performed by 정윤석 for O adsorbed on a 3 × 3 × 4 Pt(111) slab, starting from a bridge-site configuration and same initial calculation condition. During structural relaxation, the O atom moved toward an fcc hollow site. The DFT-PDOS plot places a prominent O 2p feature around −6.9 eV relative to its Fermi level. This relaxation is relevant to the interpretation of the comparison: the relaxed DFT spectrum should not be treated as a reference spectrum for a final bridge geometry.
 
@@ -310,21 +310,30 @@ Future work should prioritize more systematic, quantitative comparisons with DFT
 
 <a id="ref1"></a>
 [1] Qian, C., Vitartas, V., Kermode, J. R., & Maurer, R. J. (2026). Equivariant electronic Hamiltonian prediction with many-body message passing. *npj Computational Materials*, *12*(1), 169.
+
 <a id="ref2"></a>
 [2] Choudhary, K. (2025). Slakonet: A unified slater-koster tight-binding framework using neural network infrastructure for the periodic table. *The Journal of Physical Chemistry Letters*, *16*(43), 11109-11119.
+
 <a id="ref3"></a>
 [3] Fried, H. P., Barragan-Yani, D., Libisch, F., & Wirtz, L. (2025). A machine learning approach to predict tight-binding parameters for point defects via the projected density of states. *npj Computational Materials*, *11*(1), 176.
+
 <a id="ref4"></a>
 [4] Schwade, M., Zhang, S., Vonhoff, F., Delgado, F. P., & Egger, D. A. (2026). Physics-informed Hamiltonian learning for large-scale optoelectronic property prediction. *Nature Communications*, *17*(1), 2652.
+
 <a id="ref5"></a>
 [5] Zhu, X., Rinke, P., & Egger, D. A. (2026). Predicting temperature-dependent optoelectronic properties of semiconductor defects with equivariant neural networks. *npj Computational Materials*, *12*(1), 176.
+
 <a id="ref6"></a>
 [6] Xia, Y., Thie, A., Soon, J., & Barca, G. M. (2026). NN-xTB: density functional accuracy at semi empirical speed with neural network extended tight binding. *Nature Communications*.
+
 <a id="ref7"></a>
 [7] Batatia, I., Kovacs, D. P., Simm, G., Ortner, C., & Csányi, G. (2022). MACE: Higher order equivariant message passing neural networks for fast and accurate force fields. *Advances in neural information processing systems*, *35*, 11423-11436.
+
 <a id="ref8"></a>
 [8] Koskinen, P., & Mäkinen, V. (2009). Density-functional tight-binding for beginners. *Computational Materials Science*, *47*(1), 237-253.
+
 <a id="ref9"></a>
 [9] Synopsys QuantumATK, “ProjectedDensityOfStates,” documentation. https://docs.quantumatk.com/manual/Types/ProjectedDensityOfStates/ProjectedDensityOfStates.html
 
-10. Shuttleworth, I. G. (2018). Binding site transitions across strained oxygenated and hydroxylated Pt (111). *ChemistryOpen*, *7*(5), 356-369.
+<a id="ref10"></a>
+[10] Shuttleworth, I. G. (2018). Binding site transitions across strained oxygenated and hydroxylated Pt (111). *ChemistryOpen*, *7*(5), 356-369.
