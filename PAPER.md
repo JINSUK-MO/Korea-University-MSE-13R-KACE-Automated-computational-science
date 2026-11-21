@@ -148,7 +148,7 @@ $$\mathcal{L}_{Reg} = 0.03\frac{1}{N_{inherited}}\sum_{j \in inherited}^{}(\frac
 
 Regularization of shared TB parameter values relative to a compatible reduced-basis fit (if a warm start is used).
 
-$$\mathcal{L}_{O_{2s},Reg} = 0.20(\frac{\varepsilon_{O_{2s}} - \varepsilon_{O_{2s,0}}}{3.0}\text{)}^{2}$$
+$$\mathcal{L}_{O_{2s},Reg} = 0.20\left(\frac{\varepsilon_{O_{2s}} - \varepsilon_{O_{2s,0}}}{3.0}\text{\right)}^{2}$$
 
 Regularization of the newly introduced O 2s onsite energy around its reference value.
 
