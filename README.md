@@ -5,7 +5,7 @@ Duration: Nov. 2026 - Dec. 2026
 # Project: Physics-based and MACE-assisted Hamiltonian Construction
 
 ## Overview
-Brief introduction to our project.
+We were interested in machine-learning interatomic potentials (MLIPs), therefore, our project aims for developing a computational workflow - an alternative route to electronic-structure construction - that integrates MACE-derived energies and forces with Slater-Koster Tight-Binding theory.
 
 ## Full Report
 - [Read the full report](PAPER.md)
