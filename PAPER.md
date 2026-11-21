@@ -19,9 +19,9 @@ Ultimately, this project represents an exploratory attempt to connect machine-le
 
 ### 1.2 Background and Related Work
 
-Recent advances in machine learning have enabled efficient prediction of electronic structures through data-driven Hamiltonian modeling. MACE-H (2026) employs equivariant many-body message passing to predict DFT Kohn–Sham Hamiltonian matrices directly from atomic configurations [1]. Similarly, SlaKoNet (2025) optimizes physically interpretable Slater–Koster tight-binding parameters using electronic-structure data [2], while Fried et al. (2025) demonstrated the inference of tight-binding parameters from orbital-projected densities of states [3].
+Recent advances in machine learning have enabled efficient prediction of electronic structures through data-driven Hamiltonian modeling. MACE-H (2026) employs equivariant many-body message passing to predict DFT Kohn–Sham Hamiltonian matrices directly from atomic configurations [[1]](#ref1). Similarly, SlaKoNet (2025) optimizes physically interpretable Slater–Koster tight-binding parameters using electronic-structure data [[2]](#ref2), while Fried et al. (2025) demonstrated the inference of tight-binding parameters from orbital-projected densities of states [[3]](#ref3).
 
-Other studies have explored the integration of machine-learned interatomic potentials with electronic-structure models. HAMSTER (2026) combines physically motivated tight-binding Hamiltonians with machine-learned corrections and employs MACE force fields for atomistic simulations [4]. A related framework couples MACE with DeepH-E3 to investigate temperature-dependent electronic properties [5]. More recently, NN-xTB (2026) has incorporated a MACE-based encoder into an adaptive semi-empirical Hamiltonian, using electronic-structure calculations and energy–force training targets [6].
+Other studies have explored the integration of machine-learned interatomic potentials with electronic-structure models. HAMSTER (2026) combines physically motivated tight-binding Hamiltonians with machine-learned corrections and employs MACE force fields for atomistic simulations [[4]](#ref4). A related framework couples MACE with DeepH-E3 to investigate temperature-dependent electronic properties [[5]](#ref5). More recently, NN-xTB (2026) has incorporated a MACE-based encoder into an adaptive semi-empirical Hamiltonian, using electronic-structure calculations and energy–force training targets [[6]](#ref6).
 
 Collectively, these studies demonstrate the potential of combining machine learning with physically structured electronic Hamiltonians.
 
@@ -308,23 +308,23 @@ Future work should prioritize more systematic, quantitative comparisons with DFT
 
 ## 6. References
 
-
+<a id="ref1"></a>
 [1] Qian, C., Vitartas, V., Kermode, J. R., & Maurer, R. J. (2026). Equivariant electronic Hamiltonian prediction with many-body message passing. *npj Computational Materials*, *12*(1), 169.
-
+<a id="ref2"></a>
 [2] Choudhary, K. (2025). Slakonet: A unified slater-koster tight-binding framework using neural network infrastructure for the periodic table. *The Journal of Physical Chemistry Letters*, *16*(43), 11109-11119.
-
+<a id="ref3"></a>
 [3] Fried, H. P., Barragan-Yani, D., Libisch, F., & Wirtz, L. (2025). A machine learning approach to predict tight-binding parameters for point defects via the projected density of states. *npj Computational Materials*, *11*(1), 176.
-
+<a id="ref4"></a>
 [4] Schwade, M., Zhang, S., Vonhoff, F., Delgado, F. P., & Egger, D. A. (2026). Physics-informed Hamiltonian learning for large-scale optoelectronic property prediction. *Nature Communications*, *17*(1), 2652.
-
+<a id="ref5"></a>
 [5] Zhu, X., Rinke, P., & Egger, D. A. (2026). Predicting temperature-dependent optoelectronic properties of semiconductor defects with equivariant neural networks. *npj Computational Materials*, *12*(1), 176.
-
+<a id="ref6"></a>
 [6] Xia, Y., Thie, A., Soon, J., & Barca, G. M. (2026). NN-xTB: density functional accuracy at semi empirical speed with neural network extended tight binding. *Nature Communications*.
-
+<a id="ref7"></a>
 [7] Batatia, I., Kovacs, D. P., Simm, G., Ortner, C., & Csányi, G. (2022). MACE: Higher order equivariant message passing neural networks for fast and accurate force fields. *Advances in neural information processing systems*, *35*, 11423-11436.
-
+<a id="ref8"></a>
 [8] Koskinen, P., & Mäkinen, V. (2009). Density-functional tight-binding for beginners. *Computational Materials Science*, *47*(1), 237-253.
-
+<a id="ref9"></a>
 [9] Synopsys QuantumATK, “ProjectedDensityOfStates,” documentation. https://docs.quantumatk.com/manual/Types/ProjectedDensityOfStates/ProjectedDensityOfStates.html
 
 10. Shuttleworth, I. G. (2018). Binding site transitions across strained oxygenated and hydroxylated Pt (111). *ChemistryOpen*, *7*(5), 356-369.
