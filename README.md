@@ -12,5 +12,5 @@ We were interested in machine-learning interatomic potentials (MLIPs), therefore
 - [View PDF](paper.pdf)
 
 ## Contributors
-- [@username1](https://github.com/username1)
-- [@username2](https://github.com/username2)
+- [@Jinsuk Mo](https://github.com/JINSUK-MO)
+- [@username](https://github.com/username)
