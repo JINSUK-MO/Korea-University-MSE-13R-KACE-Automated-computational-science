@@ -3,7 +3,8 @@
 Korea University AA Co-E Creator Club (Nov. – Dec. 2026)  
 Department of Materials Science and Engineering
 
-**Team Members:** 안서영, 연제우, 이지연, 정윤석, 최준영, 모진석
+**Team Members:** [@Seoyeong Ahn](https://github.com/seo00224), 연제우, [@Jiyeon Lee](https://github.com/jiyeonie322), [@Yunseok Jung](https://github.com/Sukee03), [@Junyoung Choi](https://github.com/chlwnsdud27-cloud), and [@Jinsuk Mo](https://github.com/JINSUK-MO)
+
 
 ## 1. Introduction
 
