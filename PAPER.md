@@ -110,7 +110,7 @@ The reference dataset was generated from an initial Pt(111) adsorption model: a 
 The input extxyz file contains multiple configurations of consistent atom ordering and composition, in-plane periodicity, and finite MACE energy and force labels. Its first configuration establishes the relative-energy reference; subsequent configurations provide relative-energy residuals, while force residuals are evaluated across the training configurations. The final TB analysis notebook reads this previously generated dataset rather than rerunning MACE relaxation or performing first-principles electronic-structure calculations.
 
 <p align="center">
-<img width="552" height="496" alt="schema" src="https://github.com/user-attachments/assets/7b98ae3f-9a58-42b9-af0b-7e4c70c790a2" />
+<img width="40% alt="schema" src="https://github.com/user-attachments/assets/7b98ae3f-9a58-42b9-af0b-7e4c70c790a2" />
 
 **Figure 2.** Schematic starting configuration for the Pt(111) adsorption model used in MACE relaxation. MACE-derived trajectory is subsequently used for tight-binding fitting.
 
@@ -244,6 +244,7 @@ The baseline/refinement comparison **therefore distinguishes two orbital bases**
 
 The initial Pt-derived spectrum contained several narrow features, while the O 2p contribution was concentrated in a comparatively sharp peak near the lower-energy region of the occupied states. These results established that the Hamiltonian could be diagonalized and orbital projections extracted; they did not, by themselves, demonstrate agreement with a first-principles electronic structure.
 
+<p align="center">
 <img width="2416" height="826" alt="O_bridge_pdos_initial" src="https://github.com/user-attachments/assets/cea9b544-9a20-49e5-afd9-6ed20ce3af29" />
 
 **Figure 3.** Initial $\Gamma$-point PDOS from the reduced orbital-basis model for bridge-site O adsorption; orbital-resolved contributions (left) and elemental contributions (right).
@@ -252,12 +253,14 @@ The initial Pt-derived spectrum contained several narrow features, while the O 2
 
 The initial PDOS was first compared qualitatively with the surface electronic-structure trends discussed by Shuttleworth (2018) for oxygenated and hydroxylated Pt(111) [[10]](#ref10). Spectral features in the vicinity of approximately −5 eV (relative to each plot’s own Fermi energy) were identified as a broad point of resemblance. However, these literature calculations used different structural and modeling conditions, and similar peak positions alone cannot establish quantitative validation.
 
+<p align="center">
 <img width="456" height="423" alt="Shuttleworth_O_bridge" src="https://github.com/user-attachments/assets/c8349a0d-a2c3-4efd-9e4e-42d7bce879f9" />
 
 **Figure 4.** Representative Pt(111) electronic-structure spectra reproduced in the project material from Shuttleworth (2018) [[10]](#ref10); shown for qualitative context, not a numerical benchmark.
 
 A separate DFT calculation was subsequently performed by [@Yunseok Jung](https://github.com/Sukee03) for O adsorbed on a 3 × 3 × 4 Pt(111) slab, starting from a bridge-site configuration and same initial calculation condition. During structural relaxation, the O atom moved toward an fcc hollow site. The DFT-PDOS plot places a prominent O 2p feature around −6.9 eV relative to its Fermi level. This relaxation is relevant to the interpretation of the comparison: the relaxed DFT spectrum should not be treated as a reference spectrum for a final bridge geometry.
 
+<p align="center">
 <img width="652" height="407" alt="DFTpdos" src="https://github.com/user-attachments/assets/16a4dd74-9c7e-4e27-abec-1b187edad496" />
 
 **Figure 5.** DFT orbital-resolved PDOS for O/Pt(111) by [@Yunseok Jung](https://github.com/Sukee03), initialized at a bridge site and subsequently relaxed toward an fcc hollow geometry. Spin-resolved curves are plotted above and below the horizontal axis.
@@ -280,17 +283,27 @@ For clarity**, the orbital-basis expansion is the defining modification to the T
 
 For bridge-site O adsorption, increasing the mesh density from Γ only to 3 × 3 × 1 and approximately 5 × 5 × 1 made **the Pt-derived DOS** **less sensitive to discrete eigenvalue sampling**. In the displayed data, further increases up to 12 × 12 × 1 produced comparatively smaller visual changes in the broad Pt spectral envelope. In contrast, a narrow O 2p peak remained prominent at essentially the same Gaussian HWHM, demonstrating that the oxygen feature cannot be removed simply by increasing k-point sampling in this fitted model.
 
+<p align="center">
 <img width="1950" height="457" alt="O_bridge_k_point_sweep" src="https://github.com/user-attachments/assets/bcb781e3-60fe-4661-96b8-0127a4d4cfd4" />
 
 **Figure 6.** k-point mesh convergence check for bridge-site adsorption, comparing Pt and O orbital-group PDOS at fixed Gaussian broadening
+
+<p align="center">
+<img width="940" height="502" alt="O_bridge_9x9x1" src="https://github.com/user-attachments/assets/c48d74a9-b1bf-4979-a204-881db05e338f" />
 
 **Figure 7.** Bridge-site orbital-group PDOS at a 9x9x1 mesh. O 2p contribution remains narrow relative to the extended Pt-derived states.
 
 The orbital-resolved view of the prominent oxygen feature (around −4.7 eV in the plotted model spectrum) shows a large O 2p weight and much smaller Pt d weight at the same energy. This is consistent with a relatively localized adsorbate-dominated state and comparatively limited mixing into the Pt states represented by the model. It should not be interpreted as a direct measure of adsorption strength or catalytic activity.
 
+<p align="center">
+<img width="940" height="311" alt="O_bridge_orbital" src="https://github.com/user-attachments/assets/294d91b3-d73f-47e7-ae8b-23e1d4d11594" />
+
 **Figure 8.** Bridge-site PDOS orbital decomposition and orbital-weight analysis near the narrow oxygen-dominated feature.
 
 To check the algebraic consistency of the projected spectrum, the same fitted Hamiltonian was also analyzed with a Green-function construction based on a Schur complement. The direct eigenvector projection and the corresponding Green-function spectral function agree when evaluated with a consistent Lorentzian broadening. The minimum in the plotted inverse-Green-function residual occurs near the selected spectral feature. Such agreement is an internal numerical consistency check for the Hamiltonian and projection procedure; it is not an independent confirmation of DFT-level electronic-structure accuracy.
+
+<p align="center">
+<img width="940" height="311" alt="O_bridge_green_function" src="https://github.com/user-attachments/assets/d0272711-77bd-4dc3-b2a1-1987818c4a10" />
 
 **Figure 9.** Bridge-site oxygen 2p Green-function consistency check (left) and inverse-Green-function resonance diagnostic at the dominant k-point (0.0, 0.4, 0.0), in fractional reciprocal coordinates, on a 5x5x1 mesh (right).
 
@@ -298,13 +311,25 @@ To check the algebraic consistency of the projected spectrum, the same fitted Ha
 
 The fcc hollow calculation shows a different distribution of oxygen and platinum spectral weight. As in the bridge case, the displayed Pt-derived DOS becomes substantially more stable by approximately the 5x5x1 sampling level. The oxygen spectrum, however, is distributed across a broader low-energy range and overlaps more visibly with Pt-related features than in the bridge case. This difference is physically plausible because the bond orientations and local coordination differ between the sites.
 
+<p align="center">
+<img width="1744" height="409" alt="O_fcc_k_point_sweep" src="https://github.com/user-attachments/assets/668c6e7e-1032-4191-9232-ef232ace4a2e" />
+
 **Figure 10.** k-point mesh comparison for O adsorption at an fcc hollow site, with fixed broadening HWHM = 0.10 eV.
+
+<p align="center">
+<img width="955" height="504" alt="O_fcc_9x9x1" src="https://github.com/user-attachments/assets/1891d129-a420-4d4a-aee5-12c1f4a16213" />
 
 **Figure 11.** Orbital-group PDOS for the fcc hollow case at 9x9x1, highlighting an O-related spectral distribution broader than the bridge-site feature.
 
 For the fcc hollow configuration, the calculated PDOS exhibits qualitative similarities to the independently obtained DFT result in its overall spectral shape and distribution of prominent oxygen-related features. This observation suggests that the refined, physically constructed TB Hamiltonian can capture selected aspects of the electronic structure. The broader O-related spectral distribution is also consistent with a different orbital-hybridization pattern in the chosen TB model, although PDOS alone cannot quantify bond strength. Because the DFT reference relaxed from the initial bridge position toward an fcc hollow geometry, this comparison is more appropriate than treating the DFT result as a final bridge-site spectrum. Nevertheless, differences in relaxed geometries, energy alignment, orbital representations, and broadening prevent a claim of quantitative agreement from visual resemblance alone.
 
+<p align="center">
+<img width="955" height="314" alt="O_fcc_orbital" src="https://github.com/user-attachments/assets/36d1f1fc-f00d-4c39-93b5-cb308550a743" />
+
 **Figure 12**. FCC hollow-site orbital decomposition and representative orbital contributions for an oxygen-related spectral window.
+
+<p align="center">
+<img width="955" height="314" alt="O_fcc_green_function" src="https://github.com/user-attachments/assets/52d04fe8-4586-44d5-8148-fdc9a2fba021" />
 
 **Figure 13.** FCC hollow-site Green-function projection consistency (left) and inverse-Green-function resonance diagnostic (right).
 
@@ -314,7 +339,13 @@ Comparisons between the saved reduced-basis result and the updated calculation s
 
 The initial/refined distinction is Pt 5d / O 2p versus Pt 5d + 6s / O 2s + 2p (H 1s unchanged when included). The displayed before-and-after plots additionally differ in k-point sampling, so the improvement cannot be attributed quantitatively to basis expansion alone without a same-mesh control.
 
+<p align="center">
+<img width="955" height="314" alt="O_bridge_comparison" src="https://github.com/user-attachments/assets/eab14d56-10f1-4fbb-a984-d9b1fa9352e9" />
+
 **Figure 14.** Comparison of the saved reduced model and updated model at the bridge site: Pt 5d (left) and O 2p (right).
+
+<p align="center">
+<img width="955" height="314" alt="O_fcc_comparison" src="https://github.com/user-attachments/assets/cc789b59-0463-42ca-a7d8-dcdebbc71075" />
 
 **Figure 15.** Comparison of the saved reduced model and updated model at the fcc hollow site: Pt 5d (left) and O 2p (right).
 
