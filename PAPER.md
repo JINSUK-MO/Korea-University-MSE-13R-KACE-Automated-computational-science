@@ -85,7 +85,13 @@ Once the tight-binding Hamiltonian is assembled, the electronic eigenvalues and 
 
 $$H(k)c_{n}(k) = \varepsilon_{n}(k)c_{n}(k);\quad\quad H(k)^{\dagger} = H(k)$$
 
-The density of states counts electronic eigenstates in an energy interval. Orbital-projected DOS is obtained from a projection operator ${\widehat{P}}_{M}$ onto a selected atomic orbital or group M. In an orthonormal basis, ${\widehat{P}}_{M}\  = \ \Sigma\mu \in M\ |\mu\rangle\langle\mu|$; its expectation value on an eigenstate becomes the sum of $|cₙ\mu(k)|²$ over the selected orbitals, consistent with the projector-based definition used in QuantumATK documentation [[9]](#ref9).
+The density of states counts electronic eigenstates in an energy interval. Orbital-projected DOS is obtained from a projection operator $\widehat{P}_M$ onto a selected atomic orbital or group $M$. In an orthonormal basis,
+
+$$
+\widehat{P}_M = \sum_{\mu \in M} |\mu\rangle\langle\mu|
+$$
+
+Its expectation value on an eigenstate becomes the sum of $|c_{n\mu}(\mathbf{k})|^2$ over the selected orbitals, consistent with the projector-based definition used in QuantumATK documentation [[9]](#ref9).
 
 $$D_{M}(E) = \left( 1/N_k \right)\sum_{\mathbf{k}}\sum_n\left\langle \psi_{n\mathbf{k}}\left| {\widehat{P}}_{M} \right|\psi_{n\mathbf{k}} \right\rangle\delta(E - \varepsilon_{n\mathbf{k}})$$
 
