@@ -239,9 +239,13 @@ The initial PDOS was first compared qualitatively with the surface electronic-st
 
 A separate DFT calculation was subsequently performed by [@Yunseok Jung](https://github.com/Sukee03) for O adsorbed on a 3 × 3 × 4 Pt(111) slab, starting from a bridge-site configuration and same initial calculation condition. During structural relaxation, the O atom moved toward an fcc hollow site. The DFT-PDOS plot places a prominent O 2p feature around −6.9 eV relative to its Fermi level. This relaxation is relevant to the interpretation of the comparison: the relaxed DFT spectrum should not be treated as a reference spectrum for a final bridge geometry.
 
-https://github.com/user-attachments/assets/c33340f8-4785-4cc7-949b-06297ebdefa7
+<img width="652" height="407" alt="DFTpdos" src="https://github.com/user-attachments/assets/16a4dd74-9c7e-4e27-abec-1b187edad496" />
 
 **Figure 5.** DFT orbital-resolved PDOS for O/Pt(111) by [@Yunseok Jung](https://github.com/Sukee03), initialized at a bridge site and subsequently relaxed toward an fcc hollow geometry. Spin-resolved curves are plotted above and below the horizontal axis.
+
+https://github.com/user-attachments/assets/c33340f8-4785-4cc7-949b-06297ebdefa7
+
+**Supplementary Video 1.** Structural relaxation of oxygen adsorbed on Pt(111), initially positioned at a bridge site and subsequently moving toward an fcc hollow site.
 
 The calculation notes report a DFT final total energy of −236.19802881 eV and a reported O–slab separation of 1.1795 Å. Separately, the project calculations list relaxed energies of −212.729402 eV (bridge) and −213.089127 eV (fcc hollow), with reported vertical adsorption heights of 1.4696 and 1.2996 Å, respectively. The latter pair is consistent with a lower reported energy for fcc than bridge within that calculation set (approximately 0.360 eV). The absolute DFT and MACE/TB energies, however, have different energy definitions and reference offsets; comparing them as a percentage error would be invalid. Adsorption-height definitions must also be matched before a direct geometrical comparison.
 
