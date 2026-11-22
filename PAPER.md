@@ -71,7 +71,7 @@ For instance, the pₓ–pₓ term is $H_{p_{x},p_{x}} = l^{2}V_{pp\sigma} + \le
 **Table 1.** Slater-Koster angular-coefficient table used to construct the orbital hopping blocks. Here, x, y, and z are the direction cosines of $\widehat{\mathbf{R}}$ with $x^{2} + y^{2} = 1$, and the notation $\alpha = x^{2} + y^{2}$ and $\beta = x^{2} - y^{2}$. Reproduced from Koskinen (2009) [[8]](#ref8).
 
 <p align="center">
-<img width="80%" alt="Slater_Koster_Table" src="https://github.com/user-attachments/assets/d6c0d876-5cf0-4814-9366-97d474534212" />
+<img width="60%" alt="Slater_Koster_Table" src="https://github.com/user-attachments/assets/d6c0d876-5cf0-4814-9366-97d474534212" />
 
 > **Table 1 note:** The original table is embedded as an image in the Word source and is not transcribed here. Refer to Koskinen and Mäkinen (2009) [[8]](#ref8) for the full angular-coefficient table.
 
