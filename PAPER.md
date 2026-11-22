@@ -38,6 +38,8 @@ A central objective is to examine whether agreement in atomic energies and force
 
 Rather than proposing a universally transferable electronic-structure predictor, this project investigates the opportunities and limitations of energy–force-constrained tight-binding parameterization, with particular emphasis on interpretability, orbital hybridization, and the consistency between atomic energetics and electronic structure.
 
+<img width="313" height="476" alt="abstract" src="https://github.com/user-attachments/assets/e873157b-ce44-4d2c-ad2f-cfd3ef1dd78c" />
+
 **Figure 1.** Schematic illustration of the proposed computational workflow. MACE-derived atomic energies and forces are employed as reference quantities for optimizing Slater–Koster tight-binding parameters. The resulting Hamiltonian is diagonalized to obtain orbital-resolved electronic structures, which are subsequently used to investigate metal–adsorbate interactions relevant to oxygen reduction reactions (ORR).
 
 ## 2. Theoretical Background
@@ -66,6 +68,8 @@ $$H_{i\mu,j\nu}\left( \mathbf{R}_{\mathbf{ij}} \right) = \sum_{\lambda}{C_{\mu\n
 For instance, the pₓ–pₓ term is $H_{p_{x},p_{x}} = l^{2}V_{pp\sigma} + \left( 1 - l^{2} \right)V_{pp\pi}$. The same approach produces the Pt d–d and Pt d–O p couplings, as well as the additional s-containing couplings. The direction dependence is particularly relevant to the ontop, bridge, and hollow geometries because their metal–adsorbate bond orientations differ even for the same atomic species.
 
 **Table 1.** Slater-Koster angular-coefficient table used to construct the orbital hopping blocks. Here, x, y, and z are the direction cosines of $\widehat{\mathbf{R}}$ with $x^{2} + y^{2} = 1$, and the notation $\alpha = x^{2} + y^{2}$ and $\beta = x^{2} - y^{2}$. Reproduced from Koskinen (2009) [[8]](#ref8).
+
+<img width="925" height="1126" alt="Slater_Koster_Table" src="https://github.com/user-attachments/assets/d6c0d876-5cf0-4814-9366-97d474534212" />
 
 > **Table 1 note:** The original table is embedded as an image in the Word source and is not transcribed here. Refer to Koskinen and Mäkinen (2009) [[8]](#ref8) for the full angular-coefficient table.
 
@@ -96,6 +100,8 @@ The model system is a Pt(111) surface slab with oxygen-containing adsorbates rel
 The reference dataset was generated from an initial Pt(111) adsorption model: a 3 × 3 × 4 slab with an fcc lattice parameter of 3.92 Å, 15.0 Å of vacuum, and an adsorbate initially placed at the selected adsorption site (a nominal initial height of 2.0 Å). The lower two Pt layers were constrained during MACE structural relaxation. The resulting trajectory—atomic positions, energies, and forces—was saved as MACE_training.extxyz. Accordingly, this file contains the MACE results obtained from the specified starting conditions, not an independent geometry source unrelated to the initial model. The final TB-fitting notebook reads these stored MACE configurations; its optional ideal-geometry preview is for visualization only. Since an adsorbate may migrate during relaxation, the realized adsorption site and orientation must be checked from the relaxed coordinates.
 
 The input extxyz file contains multiple configurations of consistent atom ordering and composition, in-plane periodicity, and finite MACE energy and force labels. Its first configuration establishes the relative-energy reference; subsequent configurations provide relative-energy residuals, while force residuals are evaluated across the training configurations. The final TB analysis notebook reads this previously generated dataset rather than rerunning MACE relaxation or performing first-principles electronic-structure calculations.
+
+<img width="552" height="496" alt="schema" src="https://github.com/user-attachments/assets/7b98ae3f-9a58-42b9-af0b-7e4c70c790a2" />
 
 **Figure 2.** Schematic starting configuration for the Pt(111) adsorption model used in MACE relaxation. MACE-derived trajectory is subsequently used for tight-binding fitting.
 
@@ -229,11 +235,15 @@ The baseline/refinement comparison **therefore distinguishes two orbital bases**
 
 The initial Pt-derived spectrum contained several narrow features, while the O 2p contribution was concentrated in a comparatively sharp peak near the lower-energy region of the occupied states. These results established that the Hamiltonian could be diagonalized and orbital projections extracted; they did not, by themselves, demonstrate agreement with a first-principles electronic structure.
 
+<img width="2416" height="826" alt="O_bridge_pdos_initial" src="https://github.com/user-attachments/assets/cea9b544-9a20-49e5-afd9-6ed20ce3af29" />
+
 **Figure 3.** Initial $\Gamma$-point PDOS from the reduced orbital-basis model for bridge-site O adsorption; orbital-resolved contributions (left) and elemental contributions (right).
 
 ### 4.2 Comparison with DFT-PDOS
 
 The initial PDOS was first compared qualitatively with the surface electronic-structure trends discussed by Shuttleworth (2018) for oxygenated and hydroxylated Pt(111) [[10]](#ref10). Spectral features in the vicinity of approximately −5 eV (relative to each plot’s own Fermi energy) were identified as a broad point of resemblance. However, these literature calculations used different structural and modeling conditions, and similar peak positions alone cannot establish quantitative validation.
+
+<img width="456" height="423" alt="Shuttleworth_O_bridge" src="https://github.com/user-attachments/assets/c8349a0d-a2c3-4efd-9e4e-42d7bce879f9" />
 
 **Figure 4.** Representative Pt(111) electronic-structure spectra reproduced in the project material from Shuttleworth (2018) [[10]](#ref10); shown for qualitative context, not a numerical benchmark.
 
@@ -260,6 +270,8 @@ For clarity**, the orbital-basis expansion is the defining modification to the T
 #### 4.3.1 O Adsorption at a Bridge Site
 
 For bridge-site O adsorption, increasing the mesh density from Γ only to 3 × 3 × 1 and approximately 5 × 5 × 1 made **the Pt-derived DOS** **less sensitive to discrete eigenvalue sampling**. In the displayed data, further increases up to 12 × 12 × 1 produced comparatively smaller visual changes in the broad Pt spectral envelope. In contrast, a narrow O 2p peak remained prominent at essentially the same Gaussian HWHM, demonstrating that the oxygen feature cannot be removed simply by increasing k-point sampling in this fitted model.
+
+<img width="1950" height="457" alt="O_bridge_k_point_sweep" src="https://github.com/user-attachments/assets/bcb781e3-60fe-4661-96b8-0127a4d4cfd4" />
 
 **Figure 6.** k-point mesh convergence check for bridge-site adsorption, comparing Pt and O orbital-group PDOS at fixed Gaussian broadening
 
