@@ -39,7 +39,7 @@ A central objective is to examine whether agreement in atomic energies and force
 Rather than proposing a universally transferable electronic-structure predictor, this project investigates the opportunities and limitations of energy–force-constrained tight-binding parameterization, with particular emphasis on interpretability, orbital hybridization, and the consistency between atomic energetics and electronic structure.
 
 <p align="center">
-<img width="20%" alt="abstract" src="https://github.com/user-attachments/assets/e873157b-ce44-4d2c-ad2f-cfd3ef1dd78c" />
+<img width="30%" alt="abstract" src="https://github.com/user-attachments/assets/e873157b-ce44-4d2c-ad2f-cfd3ef1dd78c" />
 
 **Figure 1.** Schematic illustration of the proposed computational workflow. MACE-derived atomic energies and forces are employed as reference quantities for optimizing Slater–Koster tight-binding parameters. The resulting Hamiltonian is diagonalized to obtain orbital-resolved electronic structures, which are subsequently used to investigate metal–adsorbate interactions relevant to oxygen reduction reactions (ORR).
 
@@ -70,7 +70,8 @@ For instance, the pₓ–pₓ term is $H_{p_{x},p_{x}} = l^{2}V_{pp\sigma} + \le
 
 **Table 1.** Slater-Koster angular-coefficient table used to construct the orbital hopping blocks. Here, x, y, and z are the direction cosines of $\widehat{\mathbf{R}}$ with $x^{2} + y^{2} = 1$, and the notation $\alpha = x^{2} + y^{2}$ and $\beta = x^{2} - y^{2}$. Reproduced from Koskinen (2009) [[8]](#ref8).
 
-<img width="925" height="1126" alt="Slater_Koster_Table" src="https://github.com/user-attachments/assets/d6c0d876-5cf0-4814-9366-97d474534212" />
+<p align="center">
+<img width="80%" alt="Slater_Koster_Table" src="https://github.com/user-attachments/assets/d6c0d876-5cf0-4814-9366-97d474534212" />
 
 > **Table 1 note:** The original table is embedded as an image in the Word source and is not transcribed here. Refer to Koskinen and Mäkinen (2009) [[8]](#ref8) for the full angular-coefficient table.
 
@@ -102,6 +103,7 @@ The reference dataset was generated from an initial Pt(111) adsorption model: a 
 
 The input extxyz file contains multiple configurations of consistent atom ordering and composition, in-plane periodicity, and finite MACE energy and force labels. Its first configuration establishes the relative-energy reference; subsequent configurations provide relative-energy residuals, while force residuals are evaluated across the training configurations. The final TB analysis notebook reads this previously generated dataset rather than rerunning MACE relaxation or performing first-principles electronic-structure calculations.
 
+<p align="center">
 <img width="552" height="496" alt="schema" src="https://github.com/user-attachments/assets/7b98ae3f-9a58-42b9-af0b-7e4c70c790a2" />
 
 **Figure 2.** Schematic starting configuration for the Pt(111) adsorption model used in MACE relaxation. MACE-derived trajectory is subsequently used for tight-binding fitting.
