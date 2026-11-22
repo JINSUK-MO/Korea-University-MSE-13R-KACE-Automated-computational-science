@@ -265,6 +265,7 @@ A separate DFT calculation was subsequently performed by [@Yunseok Jung](https:/
 
 **Figure 5.** DFT orbital-resolved PDOS for O/Pt(111) by [@Yunseok Jung](https://github.com/Sukee03), initialized at a bridge site and subsequently relaxed toward an fcc hollow geometry. Spin-resolved curves are plotted above and below the horizontal axis.
 
+<p align="center">
 https://github.com/user-attachments/assets/c33340f8-4785-4cc7-949b-06297ebdefa7
 
 **Supplementary Video 1.** Structural relaxation of oxygen adsorbed on Pt(111), initially positioned at a bridge site and subsequently moving toward an fcc hollow site.
