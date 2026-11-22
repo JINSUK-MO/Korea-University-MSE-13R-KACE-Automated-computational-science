@@ -38,7 +38,8 @@ A central objective is to examine whether agreement in atomic energies and force
 
 Rather than proposing a universally transferable electronic-structure predictor, this project investigates the opportunities and limitations of energy–force-constrained tight-binding parameterization, with particular emphasis on interpretability, orbital hybridization, and the consistency between atomic energetics and electronic structure.
 
-<img width="313" height="476" alt="abstract" src="https://github.com/user-attachments/assets/e873157b-ce44-4d2c-ad2f-cfd3ef1dd78c" />
+<p align="center">
+<img width="20%" alt="abstract" src="https://github.com/user-attachments/assets/e873157b-ce44-4d2c-ad2f-cfd3ef1dd78c" />
 
 **Figure 1.** Schematic illustration of the proposed computational workflow. MACE-derived atomic energies and forces are employed as reference quantities for optimizing Slater–Koster tight-binding parameters. The resulting Hamiltonian is diagonalized to obtain orbital-resolved electronic structures, which are subsequently used to investigate metal–adsorbate interactions relevant to oxygen reduction reactions (ORR).
 
