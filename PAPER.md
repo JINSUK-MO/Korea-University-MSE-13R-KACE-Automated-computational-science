@@ -447,6 +447,8 @@ Several limitations remain. MACE-derived energies and forces do not uniquely det
 
 ### 4.5. Configuration-Dependent Spectral Changes and k-Point Convergence
 
+#### 4.5.1. Motivation and Quantitative Comparison Across 16 Adsorption Configurations
+
 As discussed in Section 4.2, the comparison between the calculated Tight-Binding (TB) projected density of states (PDOS) and the independently obtained DFT reference for O adsorption at the fcc hollow site revealed discrepancies in characteristic O 2p peak positions and spectral distributions.
 
 Although the refined model exhibited qualitative similarities to the DFT reference, the remaining differences highlighted the limitations of visual comparisons and motivated a quantitative analysis of spectral changes.
@@ -470,13 +472,50 @@ The Wasserstein-1 distance was first evaluated for the O 2p and Pt 5d orbital gr
   </tr>
 </table>
 
-<p align="center">
-  <b>Figure 17.</b> Wasserstein-1 distances between the initial
-  and refined TB-PDOS for (a) O 2p and (b) Pt 5d across
-  16 adsorption configurations.
-</p>
-
 **Figure 16.** Wasserstein-1 distances for (a) O 2p and (b) Pt 5d PDOS across 16 adsorption configurations. Each value represents the difference between the initial Γ-point and refined 9×9×1 spectra, normalized to unit spectral weight and expressed relative to their respective Fermi levels.
+
+The results revealed substantial configuration-dependent variations in the electronic spectra.
+
+Among the investigated configurations, O–hcp exhibited the largest O 2p Wasserstein distance (2.355 eV), followed by OOH–ontop (2.083 eV). O₂–hcp also showed a notable difference of 1.000 eV.
+
+However, the Pt 5d results exhibited a different trend. OOH–ontop showed the largest Pt 5d Wasserstein distance (2.294 eV), whereas O–hcp exhibited a substantially smaller value (0.698 eV). The corresponding Pt 5d distance for O₂–hcp was 1.099 eV.
+
+These observations indicate that the spectral responses of the adsorbate-derived and metal-derived orbital groups are not necessarily identical.
+
+To further characterize these differences, the changes in spectral centroid, main peak position, full width at half maximum (FWHM), and spectral standard deviation were evaluated.
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <img width="100%" alt="O2p_centroid_shift_heatmap" src="https://github.com/user-attachments/assets/7a9d9bbb-6810-479e-980e-7fa067af20f5" />
+      <br>
+      (a) Spectral centroid
+    </td>
+    <td width="50%" align="center">
+      <img width="100%" alt="O2p_peak_position_shift_heatmap" src="https://github.com/user-attachments/assets/f2acb055-aa0e-414c-a5b4-ca263d9f8c34" />
+      <br>
+      (b) Main peak position
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <<img width="100%" alt="O2p_peak_FWHM_change_heatmap" src="https://github.com/user-attachments/assets/f98a68ae-06bf-4610-ae87-24e8b7b76677" />
+      <br>
+      (c) FWHM
+    </td>
+    <td width="50%" align="center">
+      <img width="100%" alt="O2p_spectral_sigma_change_heatmap" src="https://github.com/user-attachments/assets/8ed02aab-13f2-4ef2-858b-4c617d3315cf" />
+      <br>
+      (d) Spectral standard deviation
+    </td>
+  </tr>
+</table>
+
+**Figure 19.** Changes in the O 2p spectral descriptors between the initial and refined models: (a) spectral centroid, (b) main peak position, (c) FWHM, and (d) spectral standard deviation. All signed values are calculated as Refined − Initial.
+
+The descriptor analysis revealed that similar Wasserstein distances may originate from different types of spectral changes. In particular, substantial differences in peak position do not necessarily correspond to comparable changes in the overall spectral distribution.
+
+Based on these observations, O–hcp, O₂–hcp, and OOH–ontop were selected for detailed investigation. These configurations exhibit distinct combinations of overall spectral redistribution, energy displacement, and changes in the Pt-derived electronic spectra.
 
 ## 5. Conclusion
 
