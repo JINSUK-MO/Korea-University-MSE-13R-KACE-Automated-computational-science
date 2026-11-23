@@ -509,6 +509,14 @@ Based on these observations, O–hcp, O₂–hcp, and OOH–ontop were selected 
 
 #### 4.5.2. Detailed Analysis of Selected Adsorption Configurations
 
+**O adsorption at the fcc hollow site**
+
+The O–fcc configuration exhibited the largest O 2p Wasserstein-1 distance (2.391 eV) among the 16 investigated adsorption configurations, accompanied by a substantial Pt 5d distance (1.891 eV). The O 2p spectral centroid shifted by −1.354 eV, whereas the dominant peak position shifted by −3.654 eV, indicating that the movement of the main peak does not fully represent the change in the overall spectral distribution.
+
+Furthermore, the spectral standard deviation increased by 2.223 eV, demonstrating a substantial redistribution of spectral weight across the energy range. The calculated FWHM also increased markedly, although this descriptor requires additional verification because of the potentially multimodal nature of the O 2p spectrum. Together, these observations suggest that O–fcc undergoes pronounced configuration-dependent spectral changes following model refinement, involving both adsorbate- and metal-projected states.
+
+Nevertheless, these differences should not be interpreted as direct evidence of improved agreement with DFT or stronger Pt–O hybridization, since the initial and refined calculations involve changes in orbital basis, fitted parameters, reciprocal-space sampling, and Fermi-level references.
+
 **O adsorption at the hcp hollow site**
 
 O–hcp exhibited the largest O 2p Wasserstein distance (2.355 eV) among the investigated configurations. Interestingly, the spectral centroid shifted by only −0.464 eV, whereas the main peak position shifted by −1.948 eV. The FWHM remained nearly unchanged (−0.016 eV), while the spectral standard deviation increased substantially by +2.074 eV. These observations suggest that the spectral difference cannot be explained solely by a uniform energy displacement or broadening of the dominant peak.
