@@ -376,12 +376,12 @@ For clarity**, the orbital-basis expansion is the defining modification to the T
 For bridge-site O adsorption, increasing the mesh density from Γ only to 3 × 3 × 1 and approximately 5 × 5 × 1 made **the Pt-derived DOS** **less sensitive to discrete eigenvalue sampling**. In the displayed data, further increases up to 12 × 12 × 1 produced comparatively smaller visual changes in the broad Pt spectral envelope. In contrast, a narrow O 2p peak remained prominent at essentially the same Gaussian HWHM, demonstrating that the oxygen feature cannot be removed simply by increasing k-point sampling in this fitted model.
 
 <p align="center">
-<img width="1950" height="457" alt="O_bridge_k_point_sweep" src="https://github.com/user-attachments/assets/bcb781e3-60fe-4661-96b8-0127a4d4cfd4" />
+<img width="3600" height="860" alt="O_bridge_k_point_sweep" src="https://github.com/user-attachments/assets/d4d3fc7d-5f13-42fa-8280-f0f596f4fd7d" />
 
 **Figure 6.** k-point mesh convergence check for bridge-site adsorption, comparing Pt and O orbital-group PDOS at fixed Gaussian broadening
 
 <p align="center">
-<img width="940" height="502" alt="O_bridge_9x9x1" src="https://github.com/user-attachments/assets/c48d74a9-b1bf-4979-a204-881db05e338f" />
+<img width="2967" height="1609" alt="O_bridge_9x9x1_pdos" src="https://github.com/user-attachments/assets/a109b92c-6ab9-45da-9a2e-7c7b8863b38f" />
 
 **Figure 7.** Bridge-site orbital-group PDOS at a 9x9x1 mesh. O 2p contribution remains narrow relative to the extended Pt-derived states.
 
@@ -404,12 +404,12 @@ To check the algebraic consistency of the projected spectrum, the same fitted Ha
 The fcc hollow calculation shows a different distribution of oxygen and platinum spectral weight. As in the bridge case, the displayed Pt-derived DOS becomes substantially more stable by approximately the 5x5x1 sampling level. The oxygen spectrum, however, is distributed across a broader low-energy range and overlaps more visibly with Pt-related features than in the bridge case. This difference is physically plausible because the bond orientations and local coordination differ between the sites.
 
 <p align="center">
-<img width="1744" height="409" alt="O_fcc_k_point_sweep" src="https://github.com/user-attachments/assets/668c6e7e-1032-4191-9232-ef232ace4a2e" />
+<img width="3600" height="860" alt="O_fcc_k_point_sweep" src="https://github.com/user-attachments/assets/fbacabd7-b253-4b92-9d4e-572f8a21e936" />
 
 **Figure 10.** k-point mesh comparison for O adsorption at an fcc hollow site, with fixed broadening HWHM = 0.10 eV.
 
 <p align="center">
-<img width="955" height="504" alt="O_fcc_9x9x1" src="https://github.com/user-attachments/assets/1891d129-a420-4d4a-aee5-12c1f4a16213" />
+<img width="2967" height="1609" alt="O_fcc_9x9x1_pdos" src="https://github.com/user-attachments/assets/4c4ff54a-3cd7-4254-b643-6a514e60e57e" />
 
 **Figure 11.** Orbital-group PDOS for the fcc hollow case at 9x9x1, highlighting an O-related spectral distribution broader than the bridge-site feature.
 
@@ -432,12 +432,12 @@ Comparisons between the saved reduced-basis result and the updated calculation s
 The initial/refined distinction is Pt 5d / O 2p versus Pt 5d + 6s / O 2s + 2p (H 1s unchanged when included). The displayed before-and-after plots additionally differ in k-point sampling, so the improvement cannot be attributed quantitatively to basis expansion alone without a same-mesh control.
 
 <p align="center">
-<img width="955" height="314" alt="O_bridge_comparison" src="https://github.com/user-attachments/assets/eab14d56-10f1-4fbb-a984-d9b1fa9352e9" />
+<img width="3567" height="1159" alt="O_bridge_comparison" src="https://github.com/user-attachments/assets/525720b9-1001-4b1a-80d6-e8b36fc282c1" />
 
 **Figure 14.** Comparison of the saved reduced model and updated model at the bridge site: Pt 5d (left) and O 2p (right).
 
 <p align="center">
-<img width="955" height="314" alt="O_fcc_comparison" src="https://github.com/user-attachments/assets/cc789b59-0463-42ca-a7d8-dcdebbc71075" />
+<img width="3567" height="1159" alt="O_fcc_comparison" src="https://github.com/user-attachments/assets/9d2f5c1d-0caa-40ed-9ae7-a4141ed4840c" />
 
 **Figure 15.** Comparison of the saved reduced model and updated model at the fcc hollow site: Pt 5d (left) and O 2p (right).
 
