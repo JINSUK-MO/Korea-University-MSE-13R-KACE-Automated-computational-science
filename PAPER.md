@@ -388,14 +388,14 @@ For bridge-site O adsorption, increasing the mesh density from Γ only to 3 × 3
 The orbital-resolved view of the prominent oxygen feature (around −4.7 eV in the plotted model spectrum) shows a large O 2p weight and much smaller Pt d weight at the same energy. This is consistent with a relatively localized adsorbate-dominated state and comparatively limited mixing into the Pt states represented by the model. It should not be interpreted as a direct measure of adsorption strength or catalytic activity.
 
 <p align="center">
-<img width="940" height="311" alt="O_bridge_orbital" src="https://github.com/user-attachments/assets/294d91b3-d73f-47e7-ae8b-23e1d4d11594" />
+<img width="85%" alt="O_bridge_2p_peak_eigenvector_analysis" src="https://github.com/user-attachments/assets/71045455-a7d2-4bc7-90de-7db74b029310" />
 
 **Figure 8.** Bridge-site PDOS orbital decomposition and orbital-weight analysis near the narrow oxygen-dominated feature.
 
 To check the algebraic consistency of the projected spectrum, the same fitted Hamiltonian was also analyzed with a Green-function construction based on a Schur complement. The direct eigenvector projection and the corresponding Green-function spectral function agree when evaluated with a consistent Lorentzian broadening. The minimum in the plotted inverse-Green-function residual occurs near the selected spectral feature. Such agreement is an internal numerical consistency check for the Hamiltonian and projection procedure; it is not an independent confirmation of DFT-level electronic-structure accuracy.
 
 <p align="center">
-<img width="940" height="311" alt="O_bridge_green_function" src="https://github.com/user-attachments/assets/d0272711-77bd-4dc3-b2a1-1987818c4a10" />
+<img width="85%" alt="O_bridge_Green_resonance_O_atom36" src="https://github.com/user-attachments/assets/c73ba855-9331-4d63-bebd-a6959586225c" />
 
 **Figure 9.** Bridge-site oxygen 2p Green-function consistency check (left) and inverse-Green-function resonance diagnostic at the dominant k-point (0.0, 0.4, 0.0), in fractional reciprocal coordinates, on a 5x5x1 mesh (right).
 
@@ -409,19 +409,19 @@ The fcc hollow calculation shows a different distribution of oxygen and platinum
 **Figure 10.** k-point mesh comparison for O adsorption at an fcc hollow site, with fixed broadening HWHM = 0.10 eV.
 
 <p align="center">
-<img width="2967" height="1609" alt="O_fcc_9x9x1_pdos" src="https://github.com/user-attachments/assets/4c4ff54a-3cd7-4254-b643-6a514e60e57e" />
+<img width="2967" height="1609" alt="O_fcc_9x9x1_pdos" src="https://github.com/user-attachments/assets/2a7cfa11-1486-4aa0-bdb2-6d98e40ac95c" />
 
 **Figure 11.** Orbital-group PDOS for the fcc hollow case at 9x9x1, highlighting an O-related spectral distribution broader than the bridge-site feature.
 
 For the fcc hollow configuration, the calculated PDOS exhibits qualitative similarities to the independently obtained DFT result in its overall spectral shape and distribution of prominent oxygen-related features. This observation suggests that the refined, physically constructed TB Hamiltonian can capture selected aspects of the electronic structure. The broader O-related spectral distribution is also consistent with a different orbital-hybridization pattern in the chosen TB model, although PDOS alone cannot quantify bond strength. Because the DFT reference relaxed from the initial bridge position toward an fcc hollow geometry, this comparison is more appropriate than treating the DFT result as a final bridge-site spectrum. Nevertheless, differences in relaxed geometries, energy alignment, orbital representations, and broadening prevent a claim of quantitative agreement from visual resemblance alone.
 
 <p align="center">
-<img width="955" height="314" alt="O_fcc_orbital" src="https://github.com/user-attachments/assets/36d1f1fc-f00d-4c39-93b5-cb308550a743" />
+<img width="85%" alt="O_fcc_2p_peak_eigenvector_analysis" src="https://github.com/user-attachments/assets/776fe59f-f619-4bb3-8756-4b3588568bcc" />
 
 **Figure 12**. FCC hollow-site orbital decomposition and representative orbital contributions for an oxygen-related spectral window.
 
 <p align="center">
-<img width="955" height="314" alt="O_fcc_green_function" src="https://github.com/user-attachments/assets/52d04fe8-4586-44d5-8148-fdc9a2fba021" />
+<img width="85%" alt="O_fcc_Green_resonance_O_atom36" src="https://github.com/user-attachments/assets/3ea5b020-b909-40a7-914f-807629162bf9" />
 
 **Figure 13.** FCC hollow-site Green-function projection consistency (left) and inverse-Green-function resonance diagnostic (right).
 
