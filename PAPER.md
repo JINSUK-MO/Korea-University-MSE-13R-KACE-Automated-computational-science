@@ -445,6 +445,39 @@ These plots should be interpreted as an overall before-and-after comparison rath
 
 Several limitations remain. MACE-derived energies and forces do not uniquely determine an electronic Hamiltonian, and the fitted TB free-energy expression uses phenomenological pair repulsion rather than a full first-principles energy functional. The Γ-only fitting and post-fit k-sampled PDOS are not fully self-consistent. Differences in spin treatment, reference geometry, Fermi-level alignment, and spectral broadening complicate comparisons with DFT; the non-spin-polarized approximation is especially restrictive for O₂.
 
+### 4.5. Configuration-Dependent Spectral Changes and k-Point Convergence
+
+As discussed in Section 4.2, the comparison between the calculated Tight-Binding (TB) projected density of states (PDOS) and the independently obtained DFT reference for O adsorption at the fcc hollow site revealed discrepancies in characteristic O 2p peak positions and spectral distributions.
+
+Although the refined model exhibited qualitative similarities to the DFT reference, the remaining differences highlighted the limitations of visual comparisons and motivated a quantitative analysis of spectral changes.
+
+Accordingly, the spectral descriptors defined in Section 3.6 were employed to systematically compare the initial and refined TB models across 16 adsorption configurations, consisting of four adsorbates (O, O₂, OH, and OOH) and four initial adsorption-site labels (ontop, bridge, fcc hollow, and hcp hollow).
+
+The Wasserstein-1 distance was first evaluated for the O 2p and Pt 5d orbital groups to characterize differences in their normalized spectral distributions.
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <img width="100%" alt="Wasserstein_O2p_16case_heatmap" src="https://github.com/user-attachments/assets/f45031e1-38d0-48d8-bd17-8cb4fe52d192" />
+      <br>
+      (a) O 2p
+    </td>
+    <td width="50%" align="center">
+      <img width="100%" alt="Wasserstein_Pt5d_16case_heatmap" src="https://github.com/user-attachments/assets/f32abd51-c7a7-4f3e-94f4-8e818d75e5bf" />
+      <br>
+      (b) Pt 5d
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <b>Figure 17.</b> Wasserstein-1 distances between the initial
+  and refined TB-PDOS for (a) O 2p and (b) Pt 5d across
+  16 adsorption configurations.
+</p>
+
+**Figure 16.** Wasserstein-1 distances for (a) O 2p and (b) Pt 5d PDOS across 16 adsorption configurations. Each value represents the difference between the initial Γ-point and refined 9×9×1 spectra, normalized to unit spectral weight and expressed relative to their respective Fermi levels.
+
 ## 5. Conclusion
 
 This project developed an automated workflow that connects MACE-labeled atomic energies and forces to a physically constructed Slater–Koster tight-binding Hamiltonian for Pt(111) adsorption systems. Without using DFT-derived Hamiltonians, eigenvalues, or PDOS as direct fitting labels, onsite, hopping, and repulsive parameters were optimized against the MLIP reference data. Diagonalization and orbital projection then enabled PDOS analysis, with Green-function and self-energy calculations available as additional internal diagnostics.
