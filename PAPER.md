@@ -373,7 +373,7 @@ For bridge-site O adsorption, increasing the mesh density from Γ only to 3 × 3
 **Figure 6.** k-point mesh convergence check for bridge-site adsorption, comparing Pt and O orbital-group PDOS at fixed Gaussian broadening
 
 <p align="center">
-<img width="2967" height="1609" alt="O_bridge_9x9x1_pdos" src="https://github.com/user-attachments/assets/a109b92c-6ab9-45da-9a2e-7c7b8863b38f" />
+<img width="70%" alt="O_bridge_9x9x1_pdos" src="https://github.com/user-attachments/assets/a109b92c-6ab9-45da-9a2e-7c7b8863b38f" />
 
 **Figure 7.** Bridge-site orbital-group PDOS at a 9x9x1 mesh. O 2p contribution remains narrow relative to the extended Pt-derived states.
 
@@ -401,7 +401,7 @@ The fcc hollow calculation shows a different distribution of oxygen and platinum
 **Figure 10.** k-point mesh comparison for O adsorption at an fcc hollow site, with fixed broadening HWHM = 0.10 eV.
 
 <p align="center">
-<img width="2967" height="1609" alt="O_fcc_9x9x1_pdos" src="https://github.com/user-attachments/assets/9aec6770-21bf-4d5f-b2b3-a4485cdcdc52" />
+<img width="70%" alt="O_fcc_9x9x1_pdos" src="https://github.com/user-attachments/assets/9aec6770-21bf-4d5f-b2b3-a4485cdcdc52" />
 
 **Figure 11.** Orbital-group PDOS for the fcc hollow case at 9x9x1, highlighting an O-related spectral distribution broader than the bridge-site feature.
 
