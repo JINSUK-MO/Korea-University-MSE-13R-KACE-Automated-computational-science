@@ -11,8 +11,12 @@ We were interested in machine-learning interatomic potentials (MLIPs), therefore
 - [Read the full report](PAPER.md)
 - [View PDF](paper.pdf)
 
-## Contributors (contributed equally)
-- [@Jinsuk Mo](https://github.com/JINSUK-MO)
+## Contributors
+All contributors contributed equally to this project.
+
+**Project Lead**: [@Jinsuk Mo](https://github.com/JINSUK-MO)
+
+**Co-authored by**
 - [@Seoyeong Ahn](https://github.com/seo00224)
 - [@username](https://github.com/username)
 - [@Jiyeon Lee](https://github.com/jiyeonie322)
