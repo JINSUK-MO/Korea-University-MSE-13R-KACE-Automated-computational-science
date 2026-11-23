@@ -234,6 +234,98 @@ The initial model included Pt 5d, O 2p, and H 1s orbitals, whereas the refined m
 
 Because the orbital basis and k-point sampling conditions differed between the initial and refined calculations, their respective contributions to the observed spectral changes cannot be fully isolated from the present comparison.
 
+### 3.6 Quantitative Spectral Analysis
+
+To quantitatively evaluate changes in the electronic structure following model refinement, several spectral descriptors were introduced for the comparison of projected densities of states (PDOS). This analysis was motivated by the discrepancies observed between the calculated TB-PDOS and the available DFT reference, particularly in the positions and widths of characteristic O 2p peaks for O adsorption on Pt(111).
+
+Although visual comparisons provide qualitative information about spectral similarities, they are insufficient for systematically distinguishing peak shifts, spectral broadening, and redistribution of orbital spectral weight. Accordingly, five complementary descriptors were employed: Wasserstein-1 distance, main peak position, spectral centroid, full width at half maximum (FWHM), and spectral standard deviation.
+
+#### 3.6.1 Wasserstein-1 Distance
+
+The Wasserstein-1 distance was introduced to quantify differences between the overall energy distributions of two PDOS spectra. It is defined as
+
+[
+W_1(P,Q)=\int_{-\infty}^{\infty}|F_P(E)-F_Q(E)|,dE
+]
+
+where (F_P(E)) and (F_Q(E)) denote the cumulative distribution functions of the normalized initial and refined PDOS, respectively.
+
+Unlike direct peak-height comparisons, the Wasserstein distance characterizes the average energy displacement associated with redistribution of spectral weight. It therefore captures differences arising from peak shifts, broadening, and changes in the distribution of electronic states.
+
+The PDOS curves were interpolated onto a common energy grid and normalized to unit integrated spectral weight before evaluation. The full spectral ranges of the two models were included in the comparison.
+
+#### 3.6.2 Main Peak Position
+
+To quantify shifts in the most prominent spectral feature, the main peak position was defined as
+
+[
+E_{\mathrm{peak}}=\arg\max_E D(E)
+]
+
+The corresponding difference between the initial and refined models was calculated as
+
+[
+\Delta E_{\mathrm{peak}}
+=E_{\mathrm{peak}}^{\mathrm{Refined}}
+-E_{\mathrm{peak}}^{\mathrm{Initial}}
+]
+
+This descriptor directly measures changes in the position of the highest-intensity peak. However, in spectra containing multiple peaks, changes in relative peak intensities may cause the identity of the dominant peak to change between models.
+
+#### 3.6.3 Spectral Centroid
+
+The spectral centroid represents the energy-weighted average position of the PDOS and is defined as
+
+[
+\mu=\frac{\int E D(E),dE}{\int D(E),dE}
+]
+
+Unlike the main peak position, the centroid incorporates contributions from the entire spectral distribution. It was therefore introduced to distinguish changes in the overall energy distribution from shifts in an individual peak.
+
+The centroid shift was defined as
+
+[
+\Delta\mu=\mu_{\mathrm{Refined}}-\mu_{\mathrm{Initial}}
+]
+
+#### 3.6.4 Full Width at Half Maximum (FWHM)
+
+The FWHM was employed to characterize the width of the dominant spectral peak. It was determined from the energy interval between the two half-maximum crossings surrounding the highest-intensity peak.
+
+This descriptor is particularly relevant to the present project because the initial TB model exhibited excessively sharp oxygen-related spectral features.
+
+However, FWHM characterizes a local peak rather than the overall spectral distribution. Therefore, it was evaluated together with the spectral standard deviation.
+
+#### 3.6.5 Spectral Standard Deviation
+
+The spectral standard deviation describes the overall energy dispersion of the PDOS:
+
+[
+\sigma_E=
+\sqrt{
+\frac{\int(E-\mu)^2D(E),dE}
+{\int D(E),dE}
+}
+]
+
+Unlike FWHM, this descriptor accounts for additional peaks and spectral tails. Consequently, it can identify redistribution or broadening of spectral weight even when the dominant peak width remains nearly unchanged.
+
+#### 3.6.6 Comparison Conditions
+
+The descriptors were evaluated for 16 configurations consisting of four adsorbates (O, O₂, OH, and OOH) and four initial adsorption-site labels (ontop, bridge, fcc hollow, and hcp hollow).
+
+The initial model employed Pt 5d, O 2p, and H 1s orbitals with Γ-point PDOS sampling. The refined model incorporated Pt 5d + 6s, O 2s + 2p, and H 1s orbitals, with the reported PDOS evaluated using a 9×9×1 k-point mesh.
+
+Both models retained the same fundamental Slater–Koster Hamiltonian construction and MACE Energy/Force fitting framework, although the refined model involved an expanded parameter space and subsequent parameter optimization.
+
+For both models, energies were expressed relative to their respective Fermi levels. The Wasserstein distances were calculated from normalized spectral distributions, whereas the other descriptors were evaluated directly from the corresponding PDOS curves.
+
+All signed descriptor changes were defined as Refined − Initial. The Wasserstein distance, by contrast, is nonnegative and represents the magnitude of the spectral distribution difference.
+
+Importantly, the present analysis compares two TB models rather than calculating discrepancies relative to DFT. Furthermore, because the orbital basis, fitted parameters, and PDOS sampling conditions differ between the models, their individual contributions cannot be isolated from this comparison alone.
+
+To examine the independent numerical effect of reciprocal-space sampling, additional k-point sweeps were considered using the same refined Hamiltonian and its fixed fitted parameters.
+
 ## 4. Results and Discussion
 
 ### 4.1 Initial Model
