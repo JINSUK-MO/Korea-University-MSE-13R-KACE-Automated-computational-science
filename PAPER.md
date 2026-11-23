@@ -569,7 +569,7 @@ To investigate the effect of reciprocal-space sampling under controlled conditio
 To quantitatively evaluate k-point convergence, the Wasserstein-1 distance, spectral centroid, and spectral standard deviation were compared with those obtained using the 12×12×1 mesh.
 
 <p align="center">
-<img width="85%" alt="kmesh_convergence_3cases" src="https://github.com/user-attachments/assets/9201e7aa-b6c4-4020-a5a8-e455af8f011c" />
+<img width="85%" alt="kmesh_convergence_4cases" src="https://github.com/user-attachments/assets/7384bc0b-ee9f-4153-b646-bda5a3869f27" />
 
 **Figure 21.** k-point convergence of the refined TB-PDOS for O–hcp, O₂–hcp, and OOH–ontop relative to the 12×12×1 reference, showing (a) O 2p Wasserstein-1 distance, (b) Pt 5d Wasserstein-1 distance, (c) O 2p centroid difference, and (d) O 2p spectral standard-deviation difference. In this figure, each spectrum is expressed relative to its own calculated Fermi level.
 
