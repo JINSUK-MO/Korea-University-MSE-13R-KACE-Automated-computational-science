@@ -258,17 +258,17 @@ The PDOS curves were interpolated onto a common energy grid and normalized to un
 
 To quantify shifts in the most prominent spectral feature, the main peak position was defined as
 
-[
+$$
 E_{\mathrm{peak}}=\arg\max_E D(E)
-]
+$$
 
 The corresponding difference between the initial and refined models was calculated as
 
-[
+$$
 \Delta E_{\mathrm{peak}}
 =E_{\mathrm{peak}}^{\mathrm{Refined}}
 -E_{\mathrm{peak}}^{\mathrm{Initial}}
-]
+$$
 
 This descriptor directly measures changes in the position of the highest-intensity peak. However, in spectra containing multiple peaks, changes in relative peak intensities may cause the identity of the dominant peak to change between models.
 
@@ -276,17 +276,17 @@ This descriptor directly measures changes in the position of the highest-intensi
 
 The spectral centroid represents the energy-weighted average position of the PDOS and is defined as
 
-[
+$$
 \mu=\frac{\int E D(E),dE}{\int D(E),dE}
-]
+$$
 
 Unlike the main peak position, the centroid incorporates contributions from the entire spectral distribution. It was therefore introduced to distinguish changes in the overall energy distribution from shifts in an individual peak.
 
 The centroid shift was defined as
 
-[
+$$
 \Delta\mu=\mu_{\mathrm{Refined}}-\mu_{\mathrm{Initial}}
-]
+$$
 
 #### 3.6.4 Full Width at Half Maximum (FWHM)
 
@@ -300,13 +300,13 @@ However, FWHM characterizes a local peak rather than the overall spectral distri
 
 The spectral standard deviation describes the overall energy dispersion of the PDOS:
 
-[
+$$
 \sigma_E=
 \sqrt{
 \frac{\int(E-\mu)^2D(E),dE}
 {\int D(E),dE}
 }
-]
+$$
 
 Unlike FWHM, this descriptor accounts for additional peaks and spectral tails. Consequently, it can identify redistribution or broadening of spectral weight even when the dominant peak width remains nearly unchanged.
 
