@@ -404,24 +404,24 @@ To check the algebraic consistency of the projected spectrum, the same fitted Ha
 The fcc hollow calculation shows a different distribution of oxygen and platinum spectral weight. As in the bridge case, the displayed Pt-derived DOS becomes substantially more stable by approximately the 5x5x1 sampling level. The oxygen spectrum, however, is distributed across a broader low-energy range and overlaps more visibly with Pt-related features than in the bridge case. This difference is physically plausible because the bond orientations and local coordination differ between the sites.
 
 <p align="center">
-<img width="3600" height="860" alt="O_fcc_k_point_sweep" src="https://github.com/user-attachments/assets/fbacabd7-b253-4b92-9d4e-572f8a21e936" />
+<img width="3600" height="860" alt="O_fcc_k_point_sweep" src="https://github.com/user-attachments/assets/92292a0f-ba6b-4866-baf9-aeea9a07a5c3" />
 
 **Figure 10.** k-point mesh comparison for O adsorption at an fcc hollow site, with fixed broadening HWHM = 0.10 eV.
 
 <p align="center">
-<img width="2967" height="1609" alt="O_fcc_9x9x1_pdos" src="https://github.com/user-attachments/assets/2a7cfa11-1486-4aa0-bdb2-6d98e40ac95c" />
+<img width="2967" height="1609" alt="O_fcc_9x9x1_pdos" src="https://github.com/user-attachments/assets/9aec6770-21bf-4d5f-b2b3-a4485cdcdc52" />
 
 **Figure 11.** Orbital-group PDOS for the fcc hollow case at 9x9x1, highlighting an O-related spectral distribution broader than the bridge-site feature.
 
 For the fcc hollow configuration, the calculated PDOS exhibits qualitative similarities to the independently obtained DFT result in its overall spectral shape and distribution of prominent oxygen-related features. This observation suggests that the refined, physically constructed TB Hamiltonian can capture selected aspects of the electronic structure. The broader O-related spectral distribution is also consistent with a different orbital-hybridization pattern in the chosen TB model, although PDOS alone cannot quantify bond strength. Because the DFT reference relaxed from the initial bridge position toward an fcc hollow geometry, this comparison is more appropriate than treating the DFT result as a final bridge-site spectrum. Nevertheless, differences in relaxed geometries, energy alignment, orbital representations, and broadening prevent a claim of quantitative agreement from visual resemblance alone.
 
 <p align="center">
-<img width="85%" alt="O_fcc_2p_peak_eigenvector_analysis" src="https://github.com/user-attachments/assets/776fe59f-f619-4bb3-8756-4b3588568bcc" />
+<img width="3867" height="1309" alt="O_2p_peak_eigenvector_analysis" src="https://github.com/user-attachments/assets/1362b15b-0cfb-438a-b740-fdcb31245e2e" />
 
 **Figure 12**. FCC hollow-site orbital decomposition and representative orbital contributions for an oxygen-related spectral window.
 
 <p align="center">
-<img width="85%" alt="O_fcc_Green_resonance_O_atom36" src="https://github.com/user-attachments/assets/3ea5b020-b909-40a7-914f-807629162bf9" />
+<img width="2974" height="1018" alt="O_fcc_green_funtion" src="https://github.com/user-attachments/assets/cd055609-26ee-4fa9-ade6-d61c48f04b2b" />
 
 **Figure 13.** FCC hollow-site Green-function projection consistency (left) and inverse-Green-function resonance diagnostic (right).
 
@@ -437,7 +437,7 @@ The initial/refined distinction is Pt 5d / O 2p versus Pt 5d + 6s / O 2s + 2p (H
 **Figure 14.** Comparison of the saved reduced model and updated model at the bridge site: Pt 5d (left) and O 2p (right).
 
 <p align="center">
-<img width="3567" height="1159" alt="O_fcc_comparison" src="https://github.com/user-attachments/assets/9d2f5c1d-0caa-40ed-9ae7-a4141ed4840c" />
+<img width="3567" height="1159" alt="O_fcc_comparison" src="https://github.com/user-attachments/assets/ddc1532d-ca67-4b16-8d2a-6655c26d2324" />
 
 **Figure 15.** Comparison of the saved reduced model and updated model at the fcc hollow site: Pt 5d (left) and O 2p (right).
 
@@ -456,12 +456,12 @@ Although the refined model exhibited qualitative similarities to the DFT referen
 <table>
   <tr>
     <td width="50%" align="center">
-      <img width="100%" alt="Wasserstein_O2p_16case_heatmap" src="https://github.com/user-attachments/assets/f45031e1-38d0-48d8-bd17-8cb4fe52d192" />
+      <img width="100%" alt="Wasserstein_O2p_16case_heatmap" src="https://github.com/user-attachments/assets/1d5fb5db-e5cc-467a-b774-659ecf4c1b23" />
       <br>
       (a) O 2p
     </td>
     <td width="50%" align="center">
-      <img width="100%" alt="Wasserstein_Pt5d_16case_heatmap" src="https://github.com/user-attachments/assets/f32abd51-c7a7-4f3e-94f4-8e818d75e5bf" />
+      <img width="100%" alt="Wasserstein_Pt5d_16case_heatmap" src="https://github.com/user-attachments/assets/520c55b1-439d-4cf3-9aca-4e75a1d75192" />
       <br>
       (b) Pt 5d
     </td>
@@ -477,24 +477,24 @@ These observations indicate that the spectral responses of the adsorbate-derived
 <table>
   <tr>
     <td width="50%" align="center">
-      <img width="100%" alt="O2p_centroid_shift_heatmap" src="https://github.com/user-attachments/assets/7a9d9bbb-6810-479e-980e-7fa067af20f5" />
+      <img width="100%" alt="O2p_centroid_shift_heatmap" src="https://github.com/user-attachments/assets/b3185919-feea-4a24-b107-9550691e6171" />
       <br>
       (a) Spectral centroid
     </td>
     <td width="50%" align="center">
-      <img width="100%" alt="O2p_peak_position_shift_heatmap" src="https://github.com/user-attachments/assets/f2acb055-aa0e-414c-a5b4-ca263d9f8c34" />
+    <img width="100%" alt="O2p_peak_position_shift_heatmap" src="https://github.com/user-attachments/assets/9f8afb4e-b1ac-44e4-a917-269711098c16" />
       <br>
       (b) Main peak position
     </td>
   </tr>
   <tr>
     <td width="50%" align="center">
-      <<img width="100%" alt="O2p_peak_FWHM_change_heatmap" src="https://github.com/user-attachments/assets/f98a68ae-06bf-4610-ae87-24e8b7b76677" />
+      <img width="100%" alt="O2p_peak_FWHM_change_heatmap" src="https://github.com/user-attachments/assets/25c3d8e1-96c8-42b2-aec5-6ff7145dd588" />
       <br>
       (c) FWHM
     </td>
     <td width="50%" align="center">
-      <img width="100%" alt="O2p_spectral_sigma_change_heatmap" src="https://github.com/user-attachments/assets/8ed02aab-13f2-4ef2-858b-4c617d3315cf" />
+      <img width="100%" alt="O2p_spectral_sigma_change_heatmap" src="https://github.com/user-attachments/assets/4a9c23e7-98f7-48e2-a2ec-e086c95b42f8" />
       <br>
       (d) Spectral standard deviation
     </td>
