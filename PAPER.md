@@ -511,11 +511,172 @@ To further characterize these differences, the changes in spectral centroid, mai
   </tr>
 </table>
 
-**Figure 19.** Changes in the O 2p spectral descriptors between the initial and refined models: (a) spectral centroid, (b) main peak position, (c) FWHM, and (d) spectral standard deviation. All signed values are calculated as Refined − Initial.
+**Figure 17.** Changes in the O 2p spectral descriptors between the initial and refined models: (a) spectral centroid, (b) main peak position, (c) FWHM, and (d) spectral standard deviation. All signed values are calculated as Refined − Initial.
 
 The descriptor analysis revealed that similar Wasserstein distances may originate from different types of spectral changes. In particular, substantial differences in peak position do not necessarily correspond to comparable changes in the overall spectral distribution.
 
 Based on these observations, O–hcp, O₂–hcp, and OOH–ontop were selected for detailed investigation. These configurations exhibit distinct combinations of overall spectral redistribution, energy displacement, and changes in the Pt-derived electronic spectra.
+
+#### 4.5.2. Detailed Analysis of Selected Adsorption Configurations
+
+**O adsorption at the hcp hollow site**
+
+O–hcp exhibited the largest O 2p Wasserstein distance (2.355 eV) among the investigated configurations.
+
+Interestingly, the spectral centroid shifted by only −0.464 eV, whereas the main peak position shifted by −1.948 eV. The FWHM remained nearly unchanged (−0.016 eV), while the spectral standard deviation increased substantially by +2.074 eV.
+
+These observations suggest that the spectral difference cannot be explained solely by a uniform energy displacement or broadening of the dominant peak.
+
+Instead, the substantial increase in spectral standard deviation is consistent with redistribution of spectral weight across different energy regions, potentially involving additional spectral features or changes in the relative intensities of existing peaks.
+
+Furthermore, the comparatively modest centroid shift indicates that the redistribution does not produce an equally large displacement of the average spectral energy.
+
+Thus, O–hcp represents a configuration in which changes in the overall spectral distribution are considerably more pronounced than those captured by the dominant peak width alone.
+
+**O₂ adsorption at the hcp hollow site**
+
+In contrast, O₂–hcp exhibited an O 2p Wasserstein distance of 1.000 eV and a spectral centroid shift of +0.988 eV.
+
+The nearly identical magnitudes of these quantities suggest that an overall energy displacement accounts for much of the difference between the two normalized spectra.
+
+The main peak position shifted by +1.086 eV, while the spectral standard deviation increased by only +0.104 eV. The FWHM decreased slightly by −0.064 eV.
+
+Together, these observations indicate that the O₂–hcp spectrum is characterized primarily by an energy displacement rather than a pronounced increase in spectral dispersion.
+
+The Pt 5d Wasserstein distance was also relatively large (1.099 eV), indicating noticeable differences in both metal- and adsorbate-projected spectra.
+
+Nevertheless, the present non-spin-polarized TB approximation limits the physical interpretation of the O₂ electronic structure.
+
+**OOH adsorption at the ontop site**
+
+The OOH–ontop configuration exhibited substantial Wasserstein distances for both O 2p (2.083 eV) and Pt 5d (2.294 eV).
+
+The O 2p centroid shifted by −2.069 eV, nearly matching the magnitude of its Wasserstein distance. The main peak position exhibited a larger shift of −3.178 eV.
+
+In contrast, the FWHM and spectral standard deviation increased by only +0.034 eV and +0.205 eV, respectively.
+
+These results indicate that the spectral difference is predominantly associated with a displacement of the O 2p energy distribution rather than substantial overall broadening. The larger main peak shift may additionally reflect changes in relative peak intensities or a change in the identity of the dominant spectral feature.
+
+The comparatively large Pt 5d Wasserstein distance distinguishes OOH–ontop from O–hcp, suggesting that model refinement produces substantial differences in both orbital groups.
+
+However, these observations do not independently demonstrate stronger Pt–O hybridization or changes in adsorption stability.
+
+Overall, the three configurations demonstrate that large Wasserstein distances can arise from distinct spectral responses. Consequently, distribution-based descriptors and peak-specific metrics provide complementary information rather than interchangeable measures of electronic-structure change.
+
+#### 4.5.3. Influence of k-Point Sampling and Fermi-Level Alignment
+
+The preceding 16-configuration analysis compared the initial Γ-point and refined 9×9×1 TB-PDOS. However, the spectra were referenced to the respective Fermi levels of the two models.
+
+Consequently, the calculated Wasserstein distances include differences associated with the orbital basis, fitted Hamiltonian parameters, reciprocal-space sampling, and energy references. Therefore, these results cannot independently identify the contribution of k-point sampling.
+
+To investigate the effect of reciprocal-space sampling under controlled conditions, additional calculations were performed using the same refined Hamiltonian with fixed fitted parameters.
+
+Five k-point meshes were considered: 1×1×1, 3×3×1, 5×5×1, 9×9×1, and 12×12×1. The 12×12×1 result was selected as the finest available reference.
+
+<table>
+  <tr>
+    <td align="center">
+      <img width="85%" alt="O_hcp_k_point_sweep" src="https://github.com/user-attachments/assets/aa6c77d0-a677-44a7-ae99-13d2da44c993" />
+      <br>(a) O–hcp
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="85%" alt="O2_hcp_k_point_sweep" src="https://github.com/user-attachments/assets/fe54e087-d564-40e3-bfea-dbecf8d7f9e3" />
+      <br>(b) O₂–hcp
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="85%" alt="OOH_ontop_k_point_sweep" src="https://github.com/user-attachments/assets/7b560522-0e06-49cd-950b-6bd3dd389471" />
+      <br>(c) OOH–ontop
+    </td>
+  </tr>
+</table>
+
+**Figure 20.** k-point dependence of Pt 5d, 6s, O 2p and O 2s PDOS for (a) O–hcp, (b) O₂–hcp, and (c) OOH–ontop. All spectra were calculated using the same refined TB Hamiltonian and fixed Gaussian broadening, with only the k-point sampling density varied.
+
+To quantitatively evaluate k-point convergence, the Wasserstein-1 distance, spectral centroid, and spectral standard deviation were compared with those obtained using the 12×12×1 mesh.
+
+<p align="center">
+<img width="85%" alt="kmesh_convergence_3cases" src="https://github.com/user-attachments/assets/9201e7aa-b6c4-4020-a5a8-e455af8f011c" />
+
+**Figure 21.** k-point convergence of the refined TB-PDOS for O–hcp, O₂–hcp, and OOH–ontop relative to the 12×12×1 reference, showing (a) O 2p Wasserstein-1 distance, (b) Pt 5d Wasserstein-1 distance, (c) O 2p centroid difference, and (d) O 2p spectral standard-deviation difference. In this figure, each spectrum is expressed relative to its own calculated Fermi level.
+
+The initial convergence analysis revealed a rapid decrease in Wasserstein distances with increasing k-point mesh density.
+
+However, the spectral centroid differences were found to be almost exactly equal in magnitude and opposite in sign to the corresponding Fermi-level differences.
+
+For example, the Γ-point OOH–ontop spectrum exhibited a centroid difference of −0.202587 eV relative to the 12×12×1 result, accompanied by a Fermi-level difference of +0.202587 eV.
+
+Similar relationships were observed for O–hcp and O₂–hcp.
+
+Because the spectral energies were expressed relative to the Fermi level, the centroid differences satisfy
+
+$$
+\Delta\mu_{\mathrm{absolute}}-\Delta E_F
+]
+$$
+
+The observed correspondence therefore indicates that the apparent centroid shifts arise almost entirely from differences in the calculated Fermi levels, rather than shifts in the absolute mean energies of the orbital-projected spectra.
+
+Furthermore, the O 2p spectral standard deviations remained nearly invariant across the investigated meshes, with differences generally on the order of 10⁻⁷ eV or smaller.
+
+These observations are consistent with the stability of the low-order spectral moments of the same orthogonal TB Hamiltonian under the investigated reciprocal-space sampling schemes.
+
+Absolute-energy Wasserstein analysis
+
+To distinguish differences caused by k-dependent Fermi-level references from changes in the spectral distributions themselves, the Wasserstein analysis was repeated using a common absolute-energy reference for all k-point meshes of each refined Hamiltonian.
+
+The energy axes were reconstructed from the saved Fermi-relative spectra according to
+
+$$
+E_{\mathrm{absolute}}=(E-E_F)+E_F
+$$
+
+Because the Hamiltonian and fitted parameters were unchanged within each configuration, this procedure enabled direct comparison of the PDOS distributions without introducing an independent Fermi-level reference shift for each mesh.
+
+The resulting Wasserstein distances are summarized in Table 4.
+
+**Table 4.** k-point convergence of the refined TB-PDOS relative to the 12×12×1 mesh. The Fermi-relative O 2p distances were calculated using each mesh's own Fermi level, while the absolute-energy distances were evaluated on a common energy scale within the same refined Hamiltonian. All values are in eV.
+
+| adsorbate   | site   | kmesh   |   W1_relative_O2p_eV |   W1_absolute_O2p_eV |   W1_absolute_Pt5d_eV |   delta_centroid_absolute_eV |   delta_sigma_absolute_eV |
+|:------------|:-------|:--------|---------------------:|---------------------:|----------------------:|-----------------------------:|--------------------------:|
+| O           | hcp    | 1x1x1   |             0.033924 |             0.028754 |              0.059389 |                     0.000001 |                  0.000000 |
+| O           | hcp    | 3x3x1   |             0.008296 |             0.001468 |              0.007016 |                    -0.000000 |                 -0.000000 |
+| O           | hcp    | 5x5x1   |             0.000990 |             0.000284 |              0.001376 |                     0.000001 |                  0.000000 |
+| O           | hcp    | 9x9x1   |             0.000766 |             0.000022 |              0.000176 |                     0.000000 |                 -0.000000 |
+| O           | hcp    | 12x12x1 |             0.000000 |             0.000000 |              0.000000 |                     0.000000 |                  0.000000 |
+| O2          | hcp    | 1x1x1   |             0.051691 |             0.007406 |              0.038731 |                     0.000000 |                 -0.000000 |
+| O2          | hcp    | 3x3x1   |             0.004626 |             0.000639 |              0.002745 |                     0.000000 |                  0.000000 |
+| O2          | hcp    | 5x5x1   |             0.001309 |             0.000237 |              0.000809 |                     0.000000 |                  0.000000 |
+| O2          | hcp    | 9x9x1   |             0.000676 |             0.000066 |              0.000236 |                    -0.000000 |                 -0.000000 |
+| O2          | hcp    | 12x12x1 |             0.000000 |             0.000000 |              0.000000 |                     0.000000 |                  0.000000 |
+| OOH         | ontop  | 1x1x1   |             0.203826 |             0.022382 |              0.174894 |                    -0.000000 |                 -0.000000 |
+| OOH         | ontop  | 3x3x1   |             0.038349 |             0.005169 |              0.020352 |                    -0.000000 |                 -0.000000 |
+| OOH         | ontop  | 5x5x1   |             0.005372 |             0.002395 |              0.006833 |                    -0.000000 |                 -0.000000 |
+| OOH         | ontop  | 9x9x1   |             0.002800 |             0.000609 |              0.001766 |                    -0.000000 |                 -0.000000 |
+| OOH         | ontop  | 12x12x1 |             0.000000 |             0.000000 |              0.000000 |                     0.000000 |                  0.000000 |
+
+The absolute-energy analysis revealed substantially smaller Wasserstein distances than those obtained using independently Fermi-referenced spectra, particularly for O₂–hcp and OOH–ontop.
+
+For example, the Γ-point OOH–ontop O 2p Wasserstein distance decreased from 0.203826 eV to 0.022382 eV after aligning the spectra to a common absolute-energy scale.
+
+Similarly, the corresponding distance for O₂–hcp decreased from 0.051691 eV to 0.007406 eV.
+
+These differences indicate that Fermi-level reference shifts made substantial contributions to the apparent k-point dependence of the O 2p spectra.
+
+Nevertheless, nonzero absolute-energy Wasserstein distances remained, reflecting changes in the detailed spectral distributions associated with reciprocal-space sampling.
+
+For OOH–ontop, the absolute-energy Pt 5d Wasserstein distance at the Γ-point remained relatively large (0.174894 eV), suggesting that its metal-projected spectral distribution is more sensitive to sparse k-point sampling than its O 2p distribution.
+
+With increasing k-point mesh density, the absolute-energy Wasserstein distances decreased substantially.
+
+At 9×9×1, all three configurations exhibited O 2p Wasserstein distances below 0.001 eV relative to the 12×12×1 reference. The corresponding Pt 5d distances were also small, with the largest value being 0.001766 eV for OOH–ontop.
+
+These results support the numerical adequacy of the 9×9×1 mesh for the investigated PDOS calculations under the present broadening conditions.
+
+However, because the 12×12×1 mesh was used as the numerical reference rather than a demonstrably fully converged result, convergence with respect to still finer k-point meshes remains to be established.
 
 ## 5. Conclusion
 
