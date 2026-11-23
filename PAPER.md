@@ -314,17 +314,9 @@ Unlike FWHM, this descriptor accounts for additional peaks and spectral tails. C
 
 The descriptors were evaluated for 16 configurations consisting of four adsorbates (O, O₂, OH, and OOH) and four initial adsorption-site labels (ontop, bridge, fcc hollow, and hcp hollow).
 
-The initial model employed Pt 5d, O 2p, and H 1s orbitals with Γ-point PDOS sampling. The refined model incorporated Pt 5d + 6s, O 2s + 2p, and H 1s orbitals, with the reported PDOS evaluated using a 9×9×1 k-point mesh.
+The initial model employed Pt 5d, O 2p, and H 1s orbitals with Γ-point PDOS sampling. The refined model incorporated Pt 5d + 6s, O 2s + 2p, and H 1s orbitals, with the reported PDOS evaluated using a 9×9×1 k-point mesh. Both models retained the same fundamental Slater–Koster Hamiltonian construction and MACE Energy/Force fitting framework, although the refined model involved an expanded parameter space and subsequent parameter optimization. For both models, energies were expressed relative to their respective Fermi levels. The Wasserstein distances were calculated from normalized spectral distributions, whereas the other descriptors were evaluated directly from the corresponding PDOS curves. All signed descriptor changes were defined as Refined − Initial. The Wasserstein distance, by contrast, is nonnegative and represents the magnitude of the spectral distribution difference.
 
-Both models retained the same fundamental Slater–Koster Hamiltonian construction and MACE Energy/Force fitting framework, although the refined model involved an expanded parameter space and subsequent parameter optimization.
-
-For both models, energies were expressed relative to their respective Fermi levels. The Wasserstein distances were calculated from normalized spectral distributions, whereas the other descriptors were evaluated directly from the corresponding PDOS curves.
-
-All signed descriptor changes were defined as Refined − Initial. The Wasserstein distance, by contrast, is nonnegative and represents the magnitude of the spectral distribution difference.
-
-Importantly, the present analysis compares two TB models rather than calculating discrepancies relative to DFT. Furthermore, because the orbital basis, fitted parameters, and PDOS sampling conditions differ between the models, their individual contributions cannot be isolated from this comparison alone.
-
-To examine the independent numerical effect of reciprocal-space sampling, additional k-point sweeps were considered using the same refined Hamiltonian and its fixed fitted parameters.
+Importantly, the present analysis compares two TB models rather than calculating discrepancies relative to DFT. Furthermore, because the orbital basis, fitted parameters, and PDOS sampling conditions differ between the models, their individual contributions cannot be isolated from this comparison alone. To examine the independent numerical effect of reciprocal-space sampling, additional k-point sweeps were considered using the same refined Hamiltonian and its fixed fitted parameters.
 
 ## 4. Results and Discussion
 
