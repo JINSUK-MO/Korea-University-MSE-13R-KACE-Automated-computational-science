@@ -1,6 +1,6 @@
 # Physics-based and MACE-assisted Hamiltonian Construction
 
-Korea University AA Co-E Creator Club (Nov. – Dec. 2026)  
+Korea University AA Co-E Creator Club (Sep. – Dec. 2026)  
 Department of Materials Science and Engineering
 
 **Team Members:** [@Seoyeong Ahn](https://github.com/seo00224), 연제우, [@Jiyeon Lee](https://github.com/jiyeonie322), [@Yunseok Jung](https://github.com/Sukee03), [@Junyoung Choi](https://github.com/chlwnsdud27-cloud), and [@Jinsuk Mo](https://github.com/JINSUK-MO)
