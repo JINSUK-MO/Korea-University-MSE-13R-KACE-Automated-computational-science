@@ -571,7 +571,6 @@ Similar relationships were observed for O–hcp and O₂–hcp. Because the spec
 
 $$
 \Delta\mu_{\mathrm{absolute}}-\Delta E_F
-]
 $$
 
 The observed correspondence therefore indicates that the apparent centroid shifts arise almost entirely from differences in the calculated Fermi levels, rather than shifts in the absolute mean energies of the orbital-projected spectra. Furthermore, the O 2p spectral standard deviations remained nearly invariant across the investigated meshes, with differences generally on the order of 10⁻⁷ eV or smaller.
