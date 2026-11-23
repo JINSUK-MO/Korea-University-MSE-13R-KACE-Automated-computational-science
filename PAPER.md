@@ -244,9 +244,9 @@ Although visual comparisons provide qualitative information about spectral simil
 
 The Wasserstein-1 distance was introduced to quantify differences between the overall energy distributions of two PDOS spectra. It is defined as
 
-[
+$$
 W_1(P,Q)=\int_{-\infty}^{\infty}|F_P(E)-F_Q(E)|,dE
-]
+$$
 
 where (F_P(E)) and (F_Q(E)) denote the cumulative distribution functions of the normalized initial and refined PDOS, respectively.
 
