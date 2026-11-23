@@ -1,6 +1,6 @@
 # Korea-University-MSE
 ### Korea University AA-CoE Creator Club (KACE) - 13R
-Duration: Nov. 2026 - Dec. 2026
+Duration: Sep. 2026 - Dec. 2026
 
 # Project: Physics-based and MACE-assisted Hamiltonian Construction
 
