@@ -802,3 +802,12 @@ Overall, this work demonstrates the feasibility of combining machine-learning-as
 
 <a id="ref11"></a>
 [11] Moradi, S., Dabbaghi, P., & Stein, C. J. (2025). Optimizing Extended Tight‐Binding Methods for Metal‐Surface Interactions. ChemPhysChem, 26(23), e202500463.
+
+<a id="ref12"></a>
+[12] Wen, M., Li, J., Brommer, P., Elliott, R. S., Sethna, J. P., & Tadmor, E. B. (2017). A KIM-compliant potfit for fitting sloppy interatomic potentials: application to the EDIP model for silicon. Modelling and Simulation in Materials Science and Engineering, 25(1), 014001.
+
+<a id="ref13"></a>
+[13] Gutenkunst, R. N., Waterfall, J. J., Casey, F. P., Brown, K. S., Myers, C. R., & Sethna, J. P. (2007). Universally sloppy parameter sensitivities in systems biology models. PLoS computational biology, 3(10), e189.
+
+<a id="ref13"></a>
+[14] Schattauer, C., Todorović, M., Ghosh, K., Rinke, P., & Libisch, F. (2022). Machine learning sparse tight-binding parameters for defects. NPJ Computational Materials, 8(1), 116.
