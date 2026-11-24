@@ -1,0 +1,3 @@
+adsorbate,site,source_dir,case_dir,old_case_dir,warm_source,historic_fitting1_warm
+O,hcp,C:\Users\LG\KACE\Pt111_3x3x4_O_hcp_autodiff_run1,C:\Users\LG\KACE\Fitting_Stability_500_O_hcp_O_fcc\O_hcp,C:\Users\LG\KACE\Fitting_Stability\O_hcp,C:\Users\LG\KACE\Fitting_Stability\O_hcp\fixed_warm_start.json,C:\Users\LG\KACE\Pt111_3x3x4_O_hcp_autodiff_run1_d6s_O2s2p_MACE_prior_universal\initial_6s_parameters.npz
+O,fcc,C:\Users\LG\KACE\Pt111_3x3x4_O_fcc_autodiff_run1,C:\Users\LG\KACE\Fitting_Stability_500_O_hcp_O_fcc\O_fcc,C:\Users\LG\KACE\Fitting_Stability\O_fcc,C:\Users\LG\KACE\Fitting_Stability\O_fcc\fixed_warm_start.json,C:\Users\LG\KACE\Fitting_Backups\O_fcc_20261123_210332\initial_6s_parameters.npz
