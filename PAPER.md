@@ -797,3 +797,6 @@ Overall, this work demonstrates the feasibility of combining machine-learning-as
 
 <a id="ref10"></a>
 [10] Shuttleworth, I. G. (2018). Binding site transitions across strained oxygenated and hydroxylated Pt (111). *ChemistryOpen*, *7*(5), 356-369.
+
+<a id="ref11"></a>
+[11] Moradi, S., Dabbaghi, P., & Stein, C. J. (2025). Optimizing Extended Tight‐Binding Methods for Metal‐Surface Interactions. ChemPhysChem, 26(23), e202500463.
