@@ -556,14 +556,14 @@ To investigate the effect of reciprocal-space sampling under controlled conditio
   </tr>
 </table>
 
-**Figure 20.** k-point dependence of Pt 5d, 6s, O 2p and O 2s PDOS for (a) O–hcp, (b) O₂–hcp, and (c) OOH–ontop. All spectra were calculated using the same refined TB Hamiltonian and fixed Gaussian broadening, with only the k-point sampling density varied.
+**Figure 18.** k-point dependence of Pt 5d, 6s, O 2p and O 2s PDOS for (a) O–hcp, (b) O₂–hcp, and (c) OOH–ontop. All spectra were calculated using the same refined TB Hamiltonian and fixed Gaussian broadening, with only the k-point sampling density varied.
 
 To quantitatively evaluate k-point convergence, the Wasserstein-1 distance, spectral centroid, and spectral standard deviation were compared with those obtained using the 12×12×1 mesh.
 
 <p align="center">
 <img width="85%" alt="kmesh_convergence_4cases" src="https://github.com/user-attachments/assets/7384bc0b-ee9f-4153-b646-bda5a3869f27" />
 
-**Figure 21.** k-point convergence of the refined TB-PDOS for O–hcp, O₂–hcp, and OOH–ontop relative to the 12×12×1 reference, showing (a) O 2p Wasserstein-1 distance, (b) Pt 5d Wasserstein-1 distance, (c) O 2p centroid difference, and (d) O 2p spectral standard-deviation difference. In this figure, each spectrum is expressed relative to its own calculated Fermi level.
+**Figure 19.** k-point convergence of the refined TB-PDOS for O–hcp, O₂–hcp, and OOH–ontop relative to the 12×12×1 reference, showing (a) O 2p Wasserstein-1 distance, (b) Pt 5d Wasserstein-1 distance, (c) O 2p centroid difference, and (d) O 2p spectral standard-deviation difference. In this figure, each spectrum is expressed relative to its own calculated Fermi level.
 
 The initial convergence analysis revealed a rapid decrease in Wasserstein distances with increasing k-point mesh density. However, the spectral centroid differences were found to be almost exactly equal in magnitude and opposite in sign to the corresponding Fermi-level differences. For example, the Γ-point OOH–ontop spectrum exhibited a centroid difference of −0.202587 eV relative to the 12×12×1 result, accompanied by a Fermi-level difference of +0.202587 eV.
 
