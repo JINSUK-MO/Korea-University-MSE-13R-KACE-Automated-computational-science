@@ -624,6 +624,98 @@ With increasing k-point mesh density, the absolute-energy Wasserstein distances 
 
 These results support the numerical adequacy of the 9×9×1 mesh for the investigated PDOS calculations under the present broadening conditions. However, because the 12×12×1 mesh was used as the numerical reference rather than a demonstrably fully converged result, convergence with respect to still finer k-point meshes remains to be established.
 
+### 4.6 Fitting Stability and Parameter Robustness
+
+Since the refined TB model is obtained by numerical optimization, the observed spectral changes may depend not only on the expanded orbital basis itself but also on the stability of the fitted parameters. To examine this issue, additional repeated fitting tests were carried out. The purpose of this section is to determine whether the spectral differences discussed above are reproducible features of the refined model or whether they are strongly affected by the optimization trajectory and parameter sensitivity.
+
+Two complementary analyses were performed. First, all 16 adsorbate–site configurations were re-fitted four additional times, giving a total of five fitting runs for each configuration. The changes in fitting parameters and spectral descriptors were then evaluated relative to the first fitting result. Second, two representative configurations, O–hcp and O–fcc, were selected for extended validation with a larger iteration budget in order to test whether additional optimization improves spectral stability.
+
+#### 4.6.1 Five-run stability test across the 16 configurations
+
+The preceding analysis demonstrated substantial configuration-dependent changes in the projected density of states (PDOS) following refinement of the tight-binding (TB) model. However, the reliability of these spectral differences depends partly on the reproducibility of the fitted Hamiltonian parameters. To assess this sensitivity, four additional fitting runs were performed for each of the 16 adsorption configurations, yielding five parameter sets per configuration. The additional runs employed perturbed initial parameters while retaining the same MACE-derived reference data, fitting objective, regularization settings, and refined orbital basis.
+
+For each configuration, the original result (Fitting 1) was used as the reference for evaluating parameter and spectral variations. The fitted parameters were compared through their signed differences, while the resulting O 2p and Pt 5d PDOS were evaluated using the Wasserstein-1 distance on a common absolute-energy scale. All spectra were calculated with 9×9×1 k-point sampling, thereby excluding differences in reciprocal-space sampling from the repeated-fitting comparison.
+
+Substantial configuration-dependent spectral variability was observed across the additional 64 fitting runs (Fig. 20). The median Wasserstein-1 distances relative to Fitting 1 were 0.517 eV for O 2p and 0.274 eV for Pt 5d, with maximum values reaching 2.590 eV and 2.177 eV, respectively. The O–hcp and O–fcc configurations exhibited particularly pronounced O 2p variability, whereas O–fcc also displayed substantial changes in its Pt 5d spectrum. In contrast, several other adsorption configurations showed comparatively smaller differences between repeated fitting results. These observations indicate that the sensitivity of the reconstructed electronic spectra to parameter initialization is not uniform across adsorption geometries.
+
+<p align="center">
+<img width="80%" alt="W1_stability_16cases" src="https://github.com/user-attachments/assets/92513247-b594-41a6-a887-2cff93f8b5f8" />
+
+**Figure 20.** Absolute-energy Wasserstein-1 distances between Fitting 1 and Fitting 2–5 across 16 adsorption configurations for (a) O 2p and (b) Pt 5d PDOS. All spectra were evaluated using the refined TB model with 9×9×1 k-point sampling.
+
+The relationship between fitting performance and spectral reproducibility was further examined by comparing changes in the final fitting cost with the corresponding Wasserstein-1 distances (Fig. 21). No clear monotonic relationship was observed. In several configurations, fitting runs with lower final costs than Fitting 1 nevertheless produced appreciably different electronic spectra. This suggests that improvement in the energy–force fitting objective does not necessarily imply convergence toward the same orbital-resolved spectral distribution. However, spectral similarity to Fitting 1 should not itself be regarded as a measure of physical accuracy, since the reference fitting result has not been independently validated against DFT.
+
+<p align="center">
+<img width="80%" alt="cost_vs_W1_stability" src="https://github.com/user-attachments/assets/f55e29d5-b026-4c1a-80f7-9c853330b84a" />
+
+**Figure 21.** Relationship between the change in final fitting cost relative to Fitting 1 and the absolute-energy Wasserstein-1 distance for (a) O 2p and (b) Pt 5d. Each point represents an additional fitting run for one adsorption configuration. All runs reached the prescribed 100-iteration limit without satisfying the optimizer's convergence criteria.
+
+Additional insight was obtained from the relationships between fitted parameters and spectral descriptors (Fig. 22). The changes in the absolute-energy O 2p spectral centroid closely matched the changes in the corresponding O 2p onsite energy parameter. This numerical correspondence is consistent with the spectral-moment properties of the orthogonal TB Hamiltonian, in which the first moment of an orbital-projected spectrum is determined by the corresponding diagonal Hamiltonian element. Consequently, the centroid shift does not provide an independent measure of parameter robustness in the present model. In contrast, the variations in dominant-peak FWHM and spectral standard deviation were not directly interchangeable, reflecting their different sensitivities to local peak shapes and the overall distribution of spectral weight.
+
+<p align="center">
+<img width="80%" alt="descriptor_parameter_relationship" src="https://github.com/user-attachments/assets/504ec6a6-c328-4443-aec3-e434eec7c7b5" />
+
+**Figure 22.** Relationships among fitted parameters and spectral descriptors across the repeated fitting experiments. (a) Absolute-energy O 2p spectral centroid change versus O 2p onsite energy parameter change, demonstrating their numerical correspondence. (b) Absolute changes in dominant-peak FWHM and spectral standard deviation, illustrating the distinction between local peak-width variation and overall spectral dispersion.
+
+Despite these observations, all 80 fitting runs, including the original 16 results, terminated upon reaching the maximum limit of 100 energy–force optimization iterations without satisfying the optimizer's convergence criteria. The observed differences therefore characterize the sensitivity of the finite-iteration fitting results rather than the variability of fully converged solutions. In particular, the current analysis cannot distinguish intrinsic parameter non-identifiability from incomplete numerical optimization. This limitation motivated an extended fitting analysis for representative adsorption configurations.
+
+#### 4.6.2. Extended 500-Iteration Validation for O–hcp and O–fcc
+
+To examine the influence of incomplete optimization on the observed spectral variability, the maximum number of energy–force fitting iterations was increased from 100 to 500. Two configurations, O–hcp and O–fcc, were selected because both exhibited substantial O 2p spectral changes in the initial-to-refined comparison and considerable run-to-run variability in the preceding stability analysis. Five fitting runs were performed for each configuration using the same fitting formulation and controlled initialization settings.
+
+Increasing the optimization limit reduced the final fitting costs in all ten runs. The corresponding projected gradient also decreased in eight of the ten runs, indicating further progress toward numerical optimization. Nevertheless, none of the extended fitting runs satisfied the optimizer's convergence criteria, with all ten terminating at the 500-iteration limit.
+
+The increased optimization budget was accompanied by a general reduction in spectral variability (Fig. 23). For O–hcp, the mean absolute-energy O 2p Wasserstein-1 distance between Fitting 1 and Fitting 2–5 decreased from 1.466 eV at 100 iterations to 0.746 eV at 500 iterations, corresponding to a reduction of approximately 49.1%. The corresponding Pt 5d distance decreased from 0.363 to 0.143 eV, representing a reduction of approximately 60.6%. Similar trends were observed for O–fcc, where the mean O 2p and Pt 5d distances decreased by approximately 21.8% and 68.7%, respectively.
+
+<p align="center">
+<img width="80%" alt="W1_stability_100_vs_500_scatter" src="https://github.com/user-attachments/assets/0da8208c-0f3e-4eb7-9a08-e78ccdb5eccd" />
+
+**Figure 23.** Comparison of absolute-energy Wasserstein-1 distances between repeated fitting results obtained with maximum iteration limits of 100 and 500 for (a) O 2p and (b) Pt 5d PDOS. Each point represents Fitting 2–5 relative to Fitting 1 for O–hcp or O–fcc. The dashed diagonal indicates equal spectral variability at both iteration limits; points below the line indicate reduced variability at 500 iterations.
+
+Although the average Wasserstein-1 distances decreased for both orbital groups and configurations, the improvement was not uniform across individual fitting runs. In particular, the O 2p distance for O–fcc Fitting 2 increased from 0.983 to 1.699 eV when the iteration limit was extended. Thus, increasing the optimization budget generally reduced run-to-run variability but did not consistently drive all parameter sets toward an identical spectral distribution.
+
+The remaining variability at 500 iterations was also configuration- and orbital-dependent (Fig. 24). O–fcc retained a larger mean O 2p Wasserstein-1 distance (1.001 eV) than O–hcp (0.746 eV), despite the reduction observed in both configurations. Meanwhile, the corresponding mean Pt 5d distances were smaller, reaching 0.430 eV for O–fcc and 0.143 eV for O–hcp. These differences indicate that the adsorbate- and metal-projected spectra respond differently to the continued parameter optimization.
+
+<table>
+  <tr>
+    <td align="center">
+      <img width="100%" alt="O2p_W1_to_fitting1_eV_absolute_heatmap" src="https://github.com/user-attachments/assets/299c90dd-21ce-4c9f-bd32-abfe923eea16" />
+    </td>
+    <td align="center">
+      <img width="100%" alt="Pt5d_W1_to_fitting1_eV_absolute_heatmap" src="https://github.com/user-attachments/assets/cb621675-a68f-4f81-b002-51977f374f9e" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">(a) W-1 Distance of O 2p PDOS with respect to Fitting 1</td>
+    <td align="center">(b) W-1 Distance of Pt 5d PDOS with respect to Fitting 1</td>
+  </tr>
+</table>
+
+**Figure 24.** Absolute-energy Wasserstein-1 distances between Fitting 1 and Fitting 2–5 for O–hcp and O–fcc obtained with the 500-iteration optimization limit. Panels (a) and (b) represent O 2p and Pt 5d PDOS, respectively. All spectra were calculated using the same refined orbital basis and 9×9×1 k-point sampling.
+
+The persistence of spectral variability was accompanied by differences in the optimized TB parameters (Fig. 25). The parameter-deviation analysis provides a complementary description of fitting stability by identifying variations in the Hamiltonian representation rather than solely in its calculated spectra. However, the magnitude of parameter variation cannot be directly equated with the magnitude of spectral differences, since distinct parameters may have different sensitivities and correlated effects on the resulting electronic eigenstates.
+
+<table>
+  <tr>
+    <td align="center">
+      <img width="100%" alt="O_fcc_parameter_delta_heatmap" src="https://github.com/user-attachments/assets/fd7b8a48-250a-431e-91a0-dd0415c18685" />
+    </td>
+    <td align="center">
+      <img width="100%" alt="O_hcp_parameter_delta_heatmap" src="https://github.com/user-attachments/assets/06fdf192-3e2d-498b-9a7d-05e4b7cbd15a" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">(a) Differences in the O-fcc fitting parameters with respect to Fitting 1</td>
+    <td align="center">(b) Differences in the O-hcp fitting parameters with respect to Fitting 1</td>
+  </tr>
+</table>
+
+**Figure 25.** Changes in fitted Slater–Koster TB parameters across the 500-iteration repeated fitting experiments for (a) O–hcp and (b) O–fcc. Each heatmap displays parameter differences between Fitting 2–5 and Fitting 1, normalized by the corresponding parameter-bound widths. Positive and negative values indicate the direction of parameter variation.
+
+Furthermore, the electronic structures obtained after 500 iterations remained appreciably different from their corresponding 100-iteration results. The mean absolute-energy Wasserstein-1 distances between the two optimization budgets were 1.057 eV for O 2p and 0.320 eV for Pt 5d in O–hcp, and 1.459 eV and 0.806 eV, respectively, in O–fcc. These differences indicate that the previously reported 100-iteration spectra had not reached a numerically stable endpoint.
+
+Overall, the extended fitting experiments suggest that incomplete optimization contributes substantially to the initialization-dependent spectral variability observed in Section 4.6.1. However, the persistence of nonconverged solutions at 500 iterations prevents a definitive assessment of parameter identifiability. Additional optimization convergence tests are therefore required before determining whether the remaining spectral differences arise from distinct converged parameter sets or continued numerical optimization.
+
 ## 5. Conclusion
 
 This project developed an automated computational workflow integrating MACE-derived atomic energies and forces with a physically constructed Slater–Koster Tight-Binding (TB) Hamiltonian for Pt(111) adsorption systems. Rather than directly employing DFT-derived Hamiltonians, eigenvalues, or projected densities of states (PDOS) as fitting targets, the proposed approach optimized onsite energies, hopping parameters, and repulsive interactions using reference energies and forces obtained from a pretrained machine-learning interatomic potential. The resulting Hamiltonians enabled orbital-resolved electronic-structure analysis, while Green-function and self-energy calculations provided additional internal consistency checks.
