@@ -716,6 +716,40 @@ Furthermore, the electronic structures obtained after 500 iterations remained ap
 
 Overall, the extended fitting experiments suggest that incomplete optimization contributes substantially to the initialization-dependent spectral variability observed in Section 4.6.1. However, the persistence of nonconverged solutions at 500 iterations prevents a definitive assessment of parameter identifiability. Additional optimization convergence tests are therefore required before determining whether the remaining spectral differences arise from distinct converged parameter sets or continued numerical optimization.
 
+#### 4.6.3. Effect of Extending the Optimization Budget to 1500 Iterations
+
+To examine whether the remaining differences in the refined-model PDOS were primarily caused by an insufficient optimization budget, the maximum number of fitting iterations was further increased from 500 to 1500 for two representative configurations, O–hcp and O–fcc. For each configuration, two fitting runs (Fitting 1 and Fitting 3) were examined so that both the optimization trajectory and the spectral response could be compared across iteration budgets.
+
+<p align="center">
+<img width="80%" alt="Figure_Optimization_History_100_500_1500" src="https://github.com/user-attachments/assets/20baeb41-a918-41d1-8cf3-a943e62ad0ff" />
+
+**Figure 26** Optimization trajectories for the 500- and 1500-iteration fittings. Objective values including regularization are plotted as a function of full-stage L-BFGS-B iteration for O–hcp and O–fcc, using Fitting 1 and Fitting 3 as representative cases. Extending the iteration budget from 500 to 1500 further lowers the objective in all tested runs, although the magnitude of the improvement depends on the configuration and fitting run.
+
+The optimization histories show that extending the iteration budget from 500 to 1500 led to a further reduction in the fitting objective in all four tested cases (Figure 26). In O–hcp, Fitting 1 already exhibited a relatively low objective at 500 iterations and changed only modestly afterward, whereas Fitting 3 continued to decrease more visibly over the extended iteration range. A similar tendency was observed for O–fcc: Fitting 1 improved moderately beyond 500 iterations, while Fitting 3 showed a more prolonged decrease toward 1500 iterations. Thus, in terms of the energy–force fitting objective alone, increasing the optimization budget remained beneficial for all four runs.
+
+<p align="center">
+<img width="80%" alt="Figure_Optimization_Cost_Gradient_100_500_1500" src="https://github.com/user-attachments/assets/9d56a4e5-5207-4fae-bdca-cf9f7499c769" />
+
+**Figure 27** Summary of fitting objective and projected gradient as a function of iteration budget. The final fitting objective (left), and the projected gradient norm (right), for O–hcp and O–fcc in Fitting 1 and Fitting 3. While the fitting objective decreases monotonically as the iteration budget increases from 100 to 500 to 1500, the projected gradient does not improve uniformly across all runs.
+
+This tendency is summarized more directly in Figure 27. The final fitting objective decreased monotonically as the full-stage iteration budget increased from 100 to 500 and then to 1500. However, the projected gradient did not decrease uniformly in all cases. In particular, O–hcp Fitting 3 and O–fcc Fitting 3 retained comparatively larger projected gradients even at 1500 iterations, whereas O–hcp Fitting 1 and O–fcc Fitting 1 reached substantially smaller gradient levels. Therefore, although the optimizer continued to reduce the objective function, the degree of local stabilization was not identical across fitting runs.
+
+<p align="center">
+<img width="80%" alt="Figure_SameRun_PDOS_W1_500_vs_1500" src="https://github.com/user-attachments/assets/ba0fca9b-5d38-4eb7-b6fb-8f2aa8900540" />
+
+**Figure 28** Absolute-energy PDOS change between the 500- and 1500-iteration results for the same initialization. Wasserstein-1 distances are shown separately for the O 2p and Pt 5d PDOS components. The O 2p spectrum exhibits greater sensitivity to the additional optimization than Pt 5d, particularly for O–hcp Fitting 1 and O–fcc Fitting 3.
+
+The key question is whether the additional reduction in fitting objective also improved spectral robustness. To test this point under controlled conditions, the PDOS obtained at 500 and 1500 iterations was compared for the **same initialization** using an absolute-energy scale, and the resulting Wasserstein-1 distances are shown in Figure 28. The O 2p PDOS remained noticeably sensitive to the additional optimization, particularly for O–hcp Fitting 1, where the 500-to-1500 change was the largest among the tested cases. O–fcc Fitting 3 also showed a substantial O 2p change, while O–hcp Fitting 3 and O–fcc Fitting 1 were less sensitive. In contrast, the Pt 5d PDOS was consistently more stable than O 2p, although non-negligible changes were still observed, especially for O–fcc Fitting 3. These results indicate that extending the optimization can still alter the orbital-resolved spectrum appreciably, even when the fitting begins from the same parameter initialization.
+
+<p align="center">
+<img width="80%" alt="Figure_WithinBudget_W1_100_500_1500" src="https://github.com/user-attachments/assets/77f6edc6-d2de-45c2-8eea-23a85954c019" />
+
+**Figure 29** Iteration-budget dependence of the spectral difference between Fitting 1 and Fitting 3. Wasserstein-1 distances between independently repeated fittings are shown for O 2p and Pt 5d as a function of the full-stage iteration budget. For both O–hcp and O–fcc, the cross-run discrepancy decreases from 100 to 500 iterations and then increases again at 1500 iterations.
+
+A complementary view is provided by comparing the spectral difference between Fitting 1 and Fitting 3 as a function of iteration budget (Figure 29). For both O–hcp and O–fcc, the O 2p Wasserstein-1 distance decreased substantially when the budget was increased from 100 to 500 iterations, indicating improved cross-run agreement at the intermediate optimization level. However, the same distance increased again at 1500 iterations for both configurations. The Pt 5d trend was qualitatively similar but smaller in magnitude. Therefore, the best agreement between independently repeated fittings was obtained at 500 iterations rather than at 1500 iterations.
+
+Taken together, the 1500-iteration analysis suggests that a larger optimization budget improves the fitting objective but does not guarantee monotonic improvement in spectral reproducibility. In the present cases, the additional optimization beyond 500 iterations continued to refine the energy–force fit, yet the O 2p spectrum remained sensitive both to the optimization path and to the specific fitting run. Accordingly, the remaining refined-model variability is better interpreted as **residual optimization dependence of the Hamiltonian-to-spectrum mapping** rather than simply as a lack of further objective reduction. For the present report, the 500-iteration results may therefore be regarded as the most balanced operating point, because they provide a substantially improved fitting objective relative to 100 iterations while also giving the smallest cross-run spectral discrepancy among the tested budgets.
+
 ## 5. Conclusion
 
 This project developed an automated computational workflow integrating MACE-derived atomic energies and forces with a physically constructed Slater–Koster Tight-Binding (TB) Hamiltonian for Pt(111) adsorption systems. Rather than directly employing DFT-derived Hamiltonians, eigenvalues, or projected densities of states (PDOS) as fitting targets, the proposed approach optimized onsite energies, hopping parameters, and repulsive interactions using reference energies and forces obtained from a pretrained machine-learning interatomic potential. The resulting Hamiltonians enabled orbital-resolved electronic-structure analysis, while Green-function and self-energy calculations provided additional internal consistency checks.
