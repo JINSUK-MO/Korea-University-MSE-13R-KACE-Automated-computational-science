@@ -1,0 +1,5 @@
+adsorbate,site,run,status,success,message,nit,cost,projected_gradient,elapsed_seconds,output_dir
+O,hcp,1,finished,False,STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT,1500,0.03695960678908925,0.018190768910472777,1095.0,C:\Users\LG\KACE\Fitting_Stability_1500_O_hcp_O_fcc\O_hcp\fitting1
+O,hcp,3,finished,False,STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT,1500,0.10084652702974464,0.0944287643986712,1063.7,C:\Users\LG\KACE\Fitting_Stability_1500_O_hcp_O_fcc\O_hcp\fitting3
+O,fcc,1,finished,False,STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT,1500,0.06379706313254468,0.007250767753659737,1118.9,C:\Users\LG\KACE\Fitting_Stability_1500_O_hcp_O_fcc\O_fcc\fitting1
+O,fcc,3,finished,False,STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT,1500,0.08143434073143092,0.21435983348476206,960.6,C:\Users\LG\KACE\Fitting_Stability_1500_O_hcp_O_fcc\O_fcc\fitting3
