@@ -18,7 +18,7 @@ All contributors contributed equally to this project.
 
 **Co-authored by**
 - [@Seoyeong Ahn](https://github.com/seo00224)
-- [@username](https://github.com/username)
+- [@Jewoo Yeon](https://github.com/jewoo1041304-coder)
 - [@Jiyeon Lee](https://github.com/jiyeonie322)
 - [@Yunseok Jung](https://github.com/Sukee03)
 - [@Junyoung Choi](https://github.com/chlwnsdud27-cloud)
