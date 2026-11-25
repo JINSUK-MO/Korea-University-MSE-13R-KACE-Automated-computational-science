@@ -73,7 +73,7 @@ For instance, the pₓ–pₓ term is $H_{p_{x},p_{x}} = l^{2}V_{pp\sigma} + \le
 <p align="center">
 <img width="60%" alt="Slater_Koster_Table" src="https://github.com/user-attachments/assets/d6c0d876-5cf0-4814-9366-97d474534212" />
 
-> **Table 1 note:** The original table is embedded as an image in the Word source and is not transcribed here. Refer to Koskinen and Mäkinen (2009) [[8]](#ref8) for the full angular-coefficient table.
+> **Table 1 note:** The original table is embedded as an image and is not transcribed here. Refer to Koskinen and Mäkinen (2009) [[8]](#ref8) for the full angular-coefficient table.
 
 The original reduced orbital model considered Pt 5d, O 2p, and H 1s states. The final notebook extends this basis to Pt (5d + 6s), O (2s + 2p), and H (1s). This extension introduces new hopping channels, including Pt s–s/s–d, Pt–O d–s/s–p/s–s, and O–O s–p/s–s contributions. Each chemical pair retains a separate repulsive term in addition to its electronic hopping channels. The basis remains orthogonal and non-spin-polarized; thus, the overlap matrix is treated as the identity and explicit spin splitting is not included.
 
