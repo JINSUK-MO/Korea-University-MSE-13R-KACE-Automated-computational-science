@@ -835,7 +835,7 @@ S_i^{\mathrm{PDOS}} =
 {2\alpha_i}
 $$
 
-where $\D_0\$ denotes the reference PDOS calculated using the fitted parameters, $\D_{i,+}\$ and $\D_{i,-}\$ represent the spectra obtained under positive and negative perturbations along the $\i\$-th GN eigenvector, respectively, and $\alpha_i\$ denotes the corresponding displacement magnitude in bound-scaled parameter coordinates. The displacement magnitude was reduced where necessary to satisfy the parameter bounds. All spectral comparisons were performed on an absolute-energy scale.
+where $D_0$ denotes the reference PDOS calculated using the fitted parameters, $D_{i,+}$ and $D_{i,-}$ represent the spectra obtained under positive and negative perturbations along the $i$-th GN eigenvector, respectively, and $alpha_i$ denotes the corresponding displacement magnitude in bound-scaled parameter coordinates. The displacement magnitude was reduced where necessary to satisfy the parameter bounds. All spectral comparisons were performed on an absolute-energy scale.
 
 The resulting relationships between GN curvature and spectral sensitivity are presented in Figure 35. Distinct sensitivity distributions were observed for the O 2p and Pt 5d states. The O 2p PDOS exhibited pronounced spectral sensitivities along several directions with relatively low or intermediate GN curvature, whereas the Pt 5d PDOS generally exhibited higher sensitivities along directions with larger GN eigenvalues. Furthermore, neither the softest nor the stiffest GN direction consistently produced the largest spectral response.
 
