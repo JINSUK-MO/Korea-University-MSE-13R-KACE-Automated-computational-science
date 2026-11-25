@@ -290,9 +290,7 @@ $$
 
 #### 3.6.4 Full Width at Half Maximum (FWHM)
 
-The FWHM was employed to characterize the width of the dominant spectral peak. It was determined from the energy interval between the two half-maximum crossings surrounding the highest-intensity peak.
-
-This descriptor is particularly relevant to the present project because the initial TB model exhibited excessively sharp oxygen-related spectral features.
+The FWHM was employed to characterize the width of the dominant spectral peak. It was determined from the energy interval between the two half-maximum crossings surrounding the highest-intensity peak. This descriptor is particularly relevant to the present project because the initial TB model exhibited excessively sharp oxygen-related spectral features.
 
 However, FWHM characterizes a local peak rather than the overall spectral distribution. Therefore, it was evaluated together with the spectral standard deviation.
 
