@@ -9,7 +9,7 @@ We were interested in machine-learning interatomic potentials (MLIPs), therefore
 
 ## Full Report
 - [Read the full report](PAPER.md)
-- [View PDF](paper.pdf)
+- [View PDF](Physics-based_MACE-assisted_Hamiltonian_Construction_2026_KACE.pdf)
 
 ## Contributors
 All contributors contributed equally to this project.
