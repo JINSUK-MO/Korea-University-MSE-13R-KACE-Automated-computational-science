@@ -868,7 +868,7 @@ Several limitations remain. The investigated fitting runs did not fully satisfy 
 
 Future work should prioritize improved optimization convergence, independent electronic-structure validation, and the development of parameterization strategies that account for the sensitivity of the intended electronic observables. Additional physical constraints, more diverse structural configurations, and sensitivity-guided optimization may provide opportunities to improve electronic-structure robustness while limiting the need for explicit electronic-structure supervision.
 
-Overall, this study demonstrates both the feasibility and limitations of integrating machine-learning-derived atomic energetics with physics-based Hamiltonian construction. Rather than establishing a direct replacement for DFT, the present work provides **insight into the information required for reliable electronic-structure reconstruction** and emphasizes the complementary roles of first-principles calculations, machine-learning interatomic potentials, and physically interpretable Hamiltonian models in the development of efficient and automated computational materials science workflows.
+Overall, this study demonstrates both the feasibility and limitations of integrating machine-learning-derived atomic energetics with physics-based Hamiltonian construction. Rather than establishing a direct replacement for DFT, the present work provides **insight into the information required for reliable electronic-structure reconstruction** and emphasizes the complementary roles of machine-learning interatomic potentials, and physically interpretable Hamiltonian models in the development of efficient and automated computational materials science workflows.
 
 ## 6. References
 
