@@ -816,6 +816,38 @@ Overall, the conditioning analysis establishes that the present energy–force f
 
 Together with the preceding stability analyses, these findings demonstrate the importance of evaluating the fitting objective, parameter robustness, and electronic-structure reproducibility as distinct aspects of Hamiltonian reconstruction. They also highlight a fundamental limitation of relying exclusively on atomic energy and force constraints when the intended application requires reliable orbital-resolved electronic structures.
 
+#### 4.6.5. Relationship Between Objective Conditioning and Spectral Sensitivity
+
+The preceding conditioning analysis identified weakly constrained parameter directions dominated primarily by Pt–O hopping decay coefficients. However, weak sensitivity to the fitting objective does not necessarily imply strong sensitivity in the reconstructed electronic structure. To examine this relationship directly, orbital-resolved PDOS variations were evaluated under parameter perturbations along the Gauss–Newton (GN) eigenvector directions.
+
+<p align="center">
+<img width="80%" alt="FigureE_soft_mode_PDOS_sensitivity" src="https://github.com/user-attachments/assets/28318fa9-8bf1-41bc-9d15-d8587a14e2fa" />
+
+**Figure 34.** Objective and Spectral Variations Along the Softest Gauss–Newton Directions. Changes in the actual fitting objective (left) and the Wasserstein-1 distances of the O 2p and Pt 5d PDOS (right) under parameter perturbations along the softest GN eigenvector for O–hcp and O–fcc in Fitting 1 and Fitting 3. Parameter displacements are expressed in bound-scaled coordinates, and spectral comparisons are performed on an absolute-energy scale.
+
+Figure 34 presents the changes in the actual fitting objective and the corresponding Wasserstein-1 distances of the O 2p and Pt 5d PDOS under perturbations along the softest GN direction. Although the fitting objective exhibited only minor variations, the resulting spectral changes were also relatively small. In all four investigated fitting results, the O 2p PDOS exhibited greater sensitivity than the Pt 5d PDOS along the softest direction. Nevertheless, the magnitude of these spectral variations was considerably smaller than the discrepancies previously observed between the 500- and 1500-iteration fitting results (Fig. 28), although the corresponding parameter displacements were not directly equivalent. These observations suggest that the softest GN direction alone is insufficient to explain the observed electronic-structure variability.
+
+To extend this analysis beyond the softest direction, spectral sensitivities were evaluated along all 27 GN eigenvector directions. For each mode, the spectral sensitivity was estimated using the Wasserstein-1 distances obtained under positive and negative parameter perturbations:
+
+$$
+S_i^{\mathrm{PDOS}} =
+\frac{W_1(D_0,D_{i,+})+W_1(D_0,D_{i,-})}
+{2\alpha_i}
+$$
+
+where \(D_0\) denotes the reference PDOS calculated using the fitted parameters, \(D_{i,+}\) and \(D_{i,-}\) represent the spectra obtained under positive and negative perturbations along the \(i\)-th GN eigenvector, respectively, and \(\alpha_i\) denotes the corresponding displacement magnitude in bound-scaled parameter coordinates. The displacement magnitude was reduced where necessary to satisfy the parameter bounds. All spectral comparisons were performed on an absolute-energy scale.
+
+The resulting relationships between GN curvature and spectral sensitivity are presented in Figure 35. Distinct sensitivity distributions were observed for the O 2p and Pt 5d states. The O 2p PDOS exhibited pronounced spectral sensitivities along several directions with relatively low or intermediate GN curvature, whereas the Pt 5d PDOS generally exhibited higher sensitivities along directions with larger GN eigenvalues. Furthermore, neither the softest nor the stiffest GN direction consistently produced the largest spectral response.
+
+<p align="center">
+<img width="80%" alt="FigureF_GN_curvature_vs_PDOS_sensitivity" src="https://github.com/user-attachments/assets/0f746377-85e0-43ce-a9e1-a46557452ab8" />
+
+**Figure 35.** Relationship Between Gauss–Newton Curvature and Orbital-Resolved Spectral Sensitivity. Spectral sensitivities of the O 2p (left) and Pt 5d (right) PDOS evaluated along the 27 GN eigenvector directions for O–hcp and O–fcc in Fitting 1 and Fitting 3. Each point represents an individual GN mode, indexed in ascending order of its eigenvalue. Spectral sensitivities are estimated from the Wasserstein-1 distances under symmetric parameter perturbations in bound-scaled coordinates.
+
+These results demonstrate that parameter sensitivity with respect to the energy–force fitting objective does not necessarily correspond to sensitivity in the reconstructed orbital-resolved electronic structures. This discrepancy reflects the different ways in which combinations of tight-binding parameters influence atomic energetics and electronic spectra.
+
+Consequently, objective conditioning alone is insufficient to characterize electronic-structure robustness in the investigated models. The present findings suggest that future Hamiltonian parameterization strategies should consider not only the accuracy and conditioning of the energy–force fitting objective but also the sensitivity of the electronic observables intended for subsequent prediction.
+
 ## 5. Conclusion
 
 This project developed an automated computational workflow for constructing physically parameterized Slater–Koster Tight-Binding (TB) Hamiltonians using atomic energies and forces obtained from a pretrained MACE interatomic potential. Unlike approaches that directly learn electronic Hamiltonians or optimize TB parameters against DFT-derived eigenvalues and projected densities of states (PDOS), the present framework employed energy–force constraints and parameter regularization to determine orbital onsite energies, hopping integrals, and short-range repulsive interactions. The resulting Hamiltonians enabled orbital-resolved electronic-structure calculations and complementary Green-function consistency analyses for Pt(111) adsorption systems.
