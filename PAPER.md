@@ -804,7 +804,7 @@ V_{\lambda}(R)=V_{\lambda,0}
 \exp[-\beta_{\lambda}(R-R_0)]f_c(R).
 $$
 
-In this expression, the decay coefficient (\beta_{\lambda}) controls the sensitivity of the hopping amplitude to changes in interatomic separation. If the reference configurations sample only a restricted range of relevant bond lengths, certain decay coefficients or combinations of hopping parameters may be insufficiently constrained by the available energy–force information. The present analysis is consistent with this possibility, although the individual contribution of the structural sampling range has not been independently quantified.
+In this expression, the decay coefficient ($\beta_{\lambda}$) controls the sensitivity of the hopping amplitude to changes in interatomic separation. If the reference configurations sample only a restricted range of relevant bond lengths, certain decay coefficients or combinations of hopping parameters may be insufficiently constrained by the available energy–force information. The present analysis is consistent with this possibility, although the individual contribution of the structural sampling range has not been independently quantified.
 
 Related difficulties have been reported in previous parameter-optimization studies. Wen et al. (2017) investigated weakly constrained parameter combinations in interatomic potential fitting, demonstrating that the sensitivity of a model may vary substantially across parameter-space directions [12]. More generally, Gutenkunst et al. (2007) characterized such highly anisotropic sensitivity landscapes as sloppy parameter sensitivities, in which certain parameter combinations are strongly constrained while others remain weakly determined [13].
 
